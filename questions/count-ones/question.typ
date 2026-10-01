@@ -3,7 +3,7 @@
 = Trees
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Original source:* Spring 2024 - Final - Question 5(a)
+  *Original source:* Spring 2024 - Final - Question 5(a) | *Level:* Regular
 ]
 
 Implement `count_ones`, which takes a `Tree` instance `t` and returns the number
@@ -34,7 +34,7 @@ def count_ones(t):
   Fill in blank (a).
 
   #multi-choice(
-    cols: 1,
+    cols: 2,
     none-above: false,
     [`b`],
     [`t`],
@@ -47,7 +47,7 @@ def count_ones(t):
   Fill in blank (b).
 
   #multi-choice(
-    cols: 1,
+    cols: 2,
     none-above: false,
     [`True`],
     [`is_leaf(b)`],
@@ -61,7 +61,7 @@ def count_ones(t):
   Fill in blank (c).
 
   #multi-choice(
-    cols: 1,
+    cols: 2,
     none-above: false,
     [`True`],
     [`is_leaf(b)`],

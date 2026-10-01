@@ -3,7 +3,7 @@
 = Nice Path!
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Original source:* Fall 2024 - Midterm 2 - Question 6 (A+ question)
+  *Original source:* Fall 2024 - Midterm 2 - Question 6 (A+ question) | *Level:* Challenge
 ]
 
 `max_path` takes a `Tree` of integers `t` and a function `g`. It returns a list

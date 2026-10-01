@@ -28,6 +28,9 @@
 #include "questions/treeils/question.typ"
 #pagebreak()
 
+#include "questions/treeil-trail/question.typ"
+#pagebreak()
+
 #include "questions/prefixes/question.typ"
 #pagebreak()
 
@@ -37,9 +40,10 @@
 #include "questions/how-long/question.typ"
 #pagebreak()
 
+#include "questions/longest/question.typ"
+#pagebreak()
+
 #include "questions/exp-tree/question.typ"
 #pagebreak()
 
 #include "questions/skipping-around/question.typ"
-#pagebreak()
-

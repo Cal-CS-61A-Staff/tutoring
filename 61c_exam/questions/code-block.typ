@@ -53,7 +53,7 @@
 }
 
 #let code_block(it, ans-space: 0.5em, disp-nums: false, post-pad: 0em) = {
-  set text(font: "DejaVu Sans Mono", size: 9pt, weight: 400)
+  set text(font: "DejaVu Sans Mono", size: 8pt, weight: 400)
   set text(top-edge: 0pt)
   set align(top)
     
@@ -70,7 +70,7 @@
   )[
     #table(
       stroke: 0pt,
-      columns: (1.4em, 1fr), row-gutter: 4pt,
+      columns: (1.4em, 1fr), row-gutter: 2pt,
       align: (right + bottom, left),
       ..for line in it.text.split("\n") {
         let lower_pad = if line.contains(re) { ans-space } else { 0em } 

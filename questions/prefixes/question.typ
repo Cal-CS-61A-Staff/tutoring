@@ -3,7 +3,7 @@
 = Prefixes
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Original source:* Spring 2023 - Midterm 2 - Question 3
+  *Original source:* Spring 2023 - Midterm 2 - Question 3 | *Level:* Regular
 ]
 
 // A prefix sum of a sequence is the sum of its first `n` elements for some positive
@@ -39,7 +39,7 @@
 //   #answer_box(width: 440pt, height: 30pt)[]
 
 //   #multi-choice(
-//     cols: 1,
+//     cols: 2,
 //     none-above: false,
 //     [`s`],
 //     [`[s]`],
@@ -64,7 +64,7 @@
 //   ```
 
 //   #multi-choice(
-//     cols: 1,
+//     cols: 2,
 //     none-above: false,
 //     [Constant],
 //     [Logarithmic],
@@ -106,7 +106,7 @@ def tens(s):
   Fill in blank (d).
 
   #multi-choice(
-    cols: 1,
+    cols: 2,
     none-above: false,
     [`isinstance(s, Link)`],
     [`isinstance(s.rest, Link)`],

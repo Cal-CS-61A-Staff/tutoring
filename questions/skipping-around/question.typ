@@ -3,7 +3,7 @@
 = Skipping Around
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Original source:* Summer 2021 - Midterm - Question 2(b)
+  *Original source:* Summer 2021 - Midterm - Question 2(b) | *Level:* Challenge
 ]
 
 A *skip list* is a sublist of a list such that no two selected elements were
@@ -51,7 +51,7 @@ def list_skipper(int_lst):
   Fill in blank (b).
 
   #multi-choice(
-    cols: 1,
+    cols: 2,
     none-above: false,
     [`list_skipper(int_lst)`],
     [`list_skipper(int_lst[1:])`],
@@ -71,7 +71,7 @@ def list_skipper(int_lst):
   Fill in blank (d).
 
   #multi-choice(
-    cols: 1,
+    cols: 2,
     none-above: false,
     [`x`],
     [`x[0]`],
@@ -86,7 +86,7 @@ def list_skipper(int_lst):
   Fill in blank (e).
 
   #multi-choice(
-    cols: 1,
+    cols: 2,
     none-above: false,
     [`x[0] < int_lst[0]`],
     [`x < int_lst[0]`],

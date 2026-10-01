@@ -115,7 +115,7 @@
   
   set text(
     font: "New Computer Modern",
-    size: 11pt,
+    size: 10pt,
     // ligatures: false,
     // historical-ligatures: false,
     features: ("lith": 0)
@@ -123,11 +123,12 @@
   
   set par(
     justify: true,
+    leading: 0.45em,
   )
 
   show heading: it => titled-question(title: it)
   
-  show raw: set text(font: "DejaVu Sans Mono", size: 0.9em, weight: 400, top-edge: 0pt)
+  show raw: set text(font: "DejaVu Sans Mono", size: 0.82em, weight: 400, top-edge: 0pt)
 
   show raw.where(block: true, lang: "text"): it => code_block(it, disp-nums: false)
 

@@ -3,7 +3,7 @@
 = Maximum Exponen-tree-ation
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Original source:* Summer 2021 - Midterm - Question 4
+  *Original source:* Summer 2021 - Midterm - Question 4 | *Level:* Challenge
 ]
 
 For a list of integers `values`, define its *maximum exponentiation* to be the
@@ -77,7 +77,7 @@ def exp_tree(values):
   Fill in blank (a).
 
   #multi-choice(
-    cols: 1,
+    cols: 2,
     none-above: false,
     [`len(values) == 0`],
     [`len(values) == 1`],
@@ -93,7 +93,7 @@ def exp_tree(values):
   Fill in blank (b).
   
   #multi-choice(
-    cols: 1,
+    cols: 2,
     none-above: false,
     [`0`],
     [`Tree(0)`],
