@@ -107,6 +107,8 @@ def is_treeil(t):
   #answer_box(width: 440pt, height: 30pt)[]
 ]
 
+#pagebreak()
+
 #text(size: 12pt, weight: "bold")[Treeil Trail]
 
 Implement `max_treeil`, which returns the largest number of nodes in any treeil
