@@ -6,27 +6,19 @@
   *Original source:* Summer 2023 - Midterm - Question 6(b) | *Level:* Regular
 ]
 
-A *treeil* is a tree in which exactly one child of every non-leaf node has a
-label equal to the label of its parent. Implement `max_treeil`, which returns
-the largest number of nodes in any treeil that is a subtree of `t`. Assume
-`is_treeil` is implemented correctly from the previous question.
+Implement `max_treeil` which takes in a tree `t` and determines the highest number of nodes in a treeil that is a subtree of `t`. 
+You may assume is_treeil is implemented correctly from the previous question.
+The following diagram displays a tree `t`, which is not a treeil. The treeil subtree of `t` with the highest number of nodes is highlighted. Calling `max_treeil` on this tree `t` should give a result of 4.
 
-In the tree below, the subtree rooted at the right child labeled `4` is the
-largest treeil and contains four nodes.
-
-```text
-1
-  2
-    1
-  4  <- root of the largest treeil
-    4
-      4
-    5
-```
+#align(center)[
+  #image("treeil-trail.jpg", width: 114pt)
+]
 
 ```python
 def max_treeil(t):
-    """Return the highest number of nodes in a treeil within t.
+    """
+    Given a tree (that is not necessarily a treeil), returns
+    the highest number of nodes in a treeil in the tree.
 
     >>> max_treeil(Tree(1))
     1

@@ -6,19 +6,11 @@
   *Original source:* Summer 2023 - Midterm - Question 6(a) | *Level:* Regular
 ]
 
-A *treeil* is a tree in which exactly one child of every non-leaf node has a
-label equal to the label of its parent. Equivalently, from every node there is
-exactly one path to a leaf consisting entirely of nodes with that same label.
+*Definition*: A *Treeil* is a tree in which _exactly_ one of the child node(s) of each non-leaf node has a label equal to the label of the node. Alternatively, a treeil is a tree where every node has a singular path from the node to a leaf consisting entirely of nodes with the same label. Here is an example of a valid treeil:
 
-```text
-1
-  1
-    1
-  2
-  4
-    4
-    5
-```
+#align(center)[
+  #image("treeil.png", width: 150pt)
+]
 
 #text(size: 12pt, weight: "bold")[Treeil Trial]
 
@@ -26,7 +18,8 @@ Implement `is_treeil`, which determines whether a tree is a treeil.
 
 ```python
 def is_treeil(t):
-    """Return whether t is a treeil.
+    """Return whether t is a treeil. A treeil is a tree where exactly one of
+    the branches of each non-leaf node has a label equal to the label of the node.
 
     >>> t1 = Tree(1)
     >>> is_treeil(t1)
@@ -57,7 +50,7 @@ def is_treeil(t):
 #pagebreak()
 
 #part(points: 1)[
-  Fill in blank (a). Select all expressions that work.
+  Fill in blank (a). Select *all* that apply.
 
   #multi-select(
     cols: 2,

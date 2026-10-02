@@ -17,15 +17,9 @@ exponentiation. For example:
 
 The maximum exponentiation of `[3, 1, 2, 3]` is 6561. Its tree is:
 
-```text
-6561
-  3
-    3
-    1
-  8
-    2
-    3
-```
+#align(center)[
+  #image("exp-tree.png", width: 150pt)
+]
 
 Implement `exp_tree`. If the maximum is `b ** n`, its two branches must be the
 `exp_tree`s of the sublists used to produce `b` and `n`, respectively. Assume
