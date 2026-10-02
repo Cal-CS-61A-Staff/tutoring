@@ -6,8 +6,9 @@
   *Original source:* Spring 2024 - Final - Question 5(a) | *Level:* Regular
 ]
 
-Implement `count_ones`, which takes a `Tree` instance `t` and returns the number
-of nodes in `t` that have exactly one child.
+Implement `count_ones`, which takes a `Tree` instance `t`. It returns the number
+of nodes in `t` that have one child. The `Tree` class is defined on the
+reference page at the beginning of this worksheet.
 
 ```python
 def count_ones(t):
@@ -17,14 +18,13 @@ def count_ones(t):
     1
     >>> count_ones(Tree(1, [Tree(2), Tree(3), Tree(4)]))
     0
-    >>> count_ones(Tree(1, [Tree(2, [Tree(3, [Tree(4)]),
-    ...                              Tree(5, [Tree(6)])])]))
+    >>> count_ones(Tree(1, [Tree(2, [Tree(3, [Tree(4)]), Tree(5, [Tree(6)])])]))
     3
     """
-    count = sum([count_ones(_______) for b in t.branches if _______])
-                             # (a)                    # (b)
+    count = sum([ count_ones(_______) for b in t.branches if _______ ])
+                               # (a)                             # (b)
     if _______:
-       # (c)
+         # (c)
         return count + 1
     else:
         return count

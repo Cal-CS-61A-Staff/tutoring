@@ -14,7 +14,7 @@
 
 #text(size: 12pt, weight: "bold")[Treeil Trial]
 
-Implement `is_treeil`, which determines whether a tree is a treeil.
+Implement `is_treeil`, which determines whether a tree `t` is a treeil.
 
 ```python
 def is_treeil(t):

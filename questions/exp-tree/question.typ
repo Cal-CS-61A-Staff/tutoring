@@ -6,28 +6,50 @@
   *Original source:* Summer 2021 - Midterm - Question 4 | *Level:* Challenge
 ]
 
-For a list of integers `values`, define its *maximum exponentiation* to be the
-largest single number obtainable by repeatedly combining consecutive pairs using
-exponentiation. For example:
+For a list of integers `values`, define the *maximum exponentiation* of `values` to
+be the largest single number that can be achieved by repeatedly combining
+pairs of consecutive elements from `values` through exponentiation. Two possible exponentiations for the list
+`[3, 1, 2, 3]` are shown below:
 
 ```text
 (3 ** 1) ** (2 ** 3) = 6561
 (3 ** (1 ** 2)) ** 3 = 27
 ```
 
-The maximum exponentiation of `[3, 1, 2, 3]` is 6561. Its tree is:
+Of all the exponentiations of `[3, 1, 2, 3]`, the maximum exponentiation is `6561`,
+which can be calculated through the below steps:
+
+```text
+[3, 1, 2, 3]
+[3 ** 1, 2, 3]
+[3, 2, 3]
+[3, 2 ** 3]
+[3, 8]
+[3 ** 8]
+6561
+```
+
+Implement `exp_tree`, which accepts a non-empty list of integers `values` and returns a tree whose label is the maximum
+exponentiation of `values`. Given that the maximum exponentiation is `b ** n` for
+some two integers `b` and `n`, the two branches of this tree should be the `exp_tree`s of the sublists
+of `values` used to exponentiate to `b` and `n`, respectively. You may assume that `values` has a unique
+exponentiation tree.
+
+For example, below is a drawing of the `exp_tree` for `values = [3, 1, 2, 3]`:
 
 #align(center)[
   #image("exp-tree.png", width: 150pt)
 ]
 
-Implement `exp_tree`. If the maximum is `b ** n`, its two branches must be the
-`exp_tree`s of the sublists used to produce `b` and `n`, respectively. Assume
-`values` has a unique maximum-exponentiation tree.
+The function should assume the `Tree` definition on the reference page at the beginning of this worksheet.
+
+Note: Exponentials in Python are expressed as `base ** exponent`.
 
 ```python
 def exp_tree(values):
-    """Return the exponential tree made from values with the greatest root label.
+    """
+    Returns the exponential tree that can be made from VALUES
+    with the greatest possible root label
 
     >>> print(exp_tree([5]))
     5
@@ -41,7 +63,8 @@ def exp_tree(values):
       9
         3
         2
-    >>> print(exp_tree([3, 1, 2, 3]))
+    >>> lst = [3, 1, 2, 3]
+    >>> print(exp_tree(lst))
     6561
       3
         3
@@ -51,13 +74,13 @@ def exp_tree(values):
         3
     """
     if __________:
-       # (a)
-        return __________
-               # (b)
+        # (a)
+       return __________
+                # (b)
     else:
         def tree_at_split(i):
             base = exp_tree(__________)
-                            # (c)
+                             # (c)
             exponent = exp_tree(__________)
                                 # (d)
             return Tree(__________, [base, exponent])
@@ -68,7 +91,7 @@ def exp_tree(values):
 ```
 
 #part(points: 1)[
-  Fill in blank (a).
+  Which of these could fill in blank (a)?
 
   #multi-choice(
     cols: 2,
@@ -84,8 +107,8 @@ def exp_tree(values):
 ]
 
 #part(points: 1)[
-  Fill in blank (b).
-  
+  Which of these could fill in blank (b)?
+
   #multi-choice(
     cols: 2,
     none-above: false,
@@ -103,25 +126,25 @@ def exp_tree(values):
 ]
 
 #part(points: 1)[
-  Fill in blank (c).
+  What line of code could go in blank (c)?
 
   #answer_box(width: 440pt, height: 30pt)[]
 ]
 
 #part(points: 1)[
-  Fill in blank (d).
+  What line of code could go in blank (d)?
 
   #answer_box(width: 440pt, height: 30pt)[]
 ]
 
 #part(points: 1)[
-  Fill in blank (e).
+  What line of code could go in blank (e)?
 
   #answer_box(width: 440pt, height: 30pt)[]
 ]
 
 #part(points: 1)[
-  Fill in blank (f).
+  What line of code could go in blank (f)?
 
   #answer_box(width: 440pt, height: 30pt)[]
 ]

@@ -6,13 +6,11 @@
   *Original source:* Fall 2024 - Midterm 2 - Question 5(b) | *Level:* Challenge
 ]
 
-Implement `longest`, which takes a linked list of positive integers `s` and a
-positive integer `n`. It returns the longest sublist of `s` whose elements sum to
-at most `n`. Do not mutate `s`. In a tie, return any longest valid sublist.
-Assume `longer` is implemented correctly.
+Implement `longest`, which takes a linked list of postive integers `s` and a positive integer `n`. It returns the longest sublist of `s` with elements that sum to a number less than or equal to `n`. *Do not mutate `s`.* In case of a tie, return any of the longest sublists whose sum is `n` or less. Assume `longer` is implemented correctly.
 
-A sublist contains some, none, or all elements of `s` in their original order.
-The sum of `()` is 0, and `()` is a sublist of every linked list.
+A sublist of a linked list `s` is a linked list with some (or none or all) of the elements of `s` in order.
+
+Assume the sum of the elements of `()` is 0. `()` is a sublist of any linked list.
 
 ```python
 def longest(s, n):
@@ -61,4 +59,3 @@ def longest(s, n):
 
   #answer_box(width: 440pt, height: 30pt)[]
 ]
-

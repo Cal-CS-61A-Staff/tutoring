@@ -6,79 +6,11 @@
   *Original source:* Spring 2023 - Midterm 2 - Question 3 | *Level:* Regular
 ]
 
-// A prefix sum of a sequence is the sum of its first `n` elements for some positive
-// length `n`.
+Implement `tens`, which takes a *non-empty* linked list of numbers `s`
+represented as a `Link` instance. It prints all of the prefix sums of `s` that
+are multiples of 10 in increasing order of the length of the prefix.
 
-// #text(size: 12pt, weight: "bold")[Prefix sums]
-
-// Implement `prefix`, which takes a list of numbers `s` and returns all prefix sums
-// of `s` in increasing order of prefix length.
-
-// ```python
-// def prefix(s):
-//     """Return a list of all prefix sums of list s.
-
-//     >>> prefix([1, 2, 3, 0, 4, 5])
-//     [1, 3, 6, 6, 10, 15]
-//     >>> prefix([2, 2, 2, 0, -5, 5])
-//     [2, 4, 6, 6, 1, 6]
-//     """
-//     return [_________ for k in _________]
-//             # (a)          # (b)
-// ```
-
-// #part(points: 2)[
-//   Fill in blank (a).
-
-//   #answer_box(width: 440pt, height: 30pt)[]
-// ]
-
-// #part(points: 1)[
-//   Fill in blank (b).
-
-//   #answer_box(width: 440pt, height: 30pt)[]
-
-//   #multi-choice(
-//     cols: 2,
-//     none-above: false,
-//     [`s`],
-//     [`[s]`],
-//     [`s[1:]`],
-//     [`range(s)`],
-//     [`range(len(s))`],
-//   )
-// ]
-
-// #part(points: 1)[
-//   What is the order of growth of the time required by the alternate implementation
-//   below, in terms of the length of `s`? Assume `append` takes constant time.
-
-//   ```python
-//   def prefix(s):
-//       t = 0
-//       result = []
-//       for x in s:
-//           t = t + x
-//           result.append(t)
-//       return result
-//   ```
-
-//   #multi-choice(
-//     cols: 2,
-//     none-above: false,
-//     [Constant],
-//     [Logarithmic],
-//     [Linear],
-//     [Quadratic],
-//     [Exponential],
-//   )
-// ]
-
-#text(size: 12pt, weight: "bold")[Tens]
-
-Implement `tens`, which takes a non-empty linked list of numbers `s` represented
-as a `Link`. It prints all prefix sums of `s` that are multiples of 10, in
-increasing order of prefix length.
+The `Link` class appears on the reference page at the beginning of this worksheet.
 
 ```python
 def tens(s):
@@ -90,16 +22,21 @@ def tens(s):
     30
     50
     """
+
     def f(suffix, total):
+
         if total % 10 == 0:
+
             print(total)
+
         if _________:
-            # (d)
+              # (d)
+
             _________
-            # (e)
+               # (e)
 
     _________
-    # (f)
+       # (f)
 ```
 
 #part(points: 1)[

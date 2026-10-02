@@ -8,8 +8,9 @@
 
 #text(size: 12pt, weight: "bold")[Longer]
 
-Implement `longer`, which takes two linked lists of numbers `s` and `t`. It
-returns the longer list. If they have the same length, it returns `s`.
+Implement `longer`, which takes two linked lists of numbers `s` and `t`. It returns the longer of the two. If they have the same length, it returns `s`.
+
+A linked list is either a `Link` instance or `()`. The `Link` class is on the reference page at the beginning of this worksheet.
 
 ```python
 def longer(s, t):
