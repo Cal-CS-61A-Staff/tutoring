@@ -111,11 +111,12 @@
     header: exam_header(),
     footer: exam_footer(class, semester, exam), 
     numbering: "1",
+    margin: (top: 1.4cm, bottom: 1.4cm, left: 1.5cm, right: 1.5cm),
   )
   
   set text(
     font: "New Computer Modern",
-    size: 10pt,
+    size: 9.5pt,
     // ligatures: false,
     // historical-ligatures: false,
     features: ("lith": 0)
@@ -123,7 +124,7 @@
   
   set par(
     justify: true,
-    leading: 0.45em,
+    leading: 0.35em,
   )
 
   show heading: it => titled-question(title: it)

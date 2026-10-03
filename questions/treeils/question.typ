@@ -55,8 +55,8 @@ def is_treeil(t):
   #multi-select(
     cols: 2,
     none-above: false,
-    [`True`], [`False`], [`is_leaf(t)`], [`t.branches`],
-    [`not t.branches`], [`t.label`], [`not t.label`], [`t.branches == []`],
+    [`True`], [`False`], correct()[`is_leaf(t)`], [`t.branches`],
+    correct()[`not t.branches`], [`t.label`], [`not t.label`], correct()[`t.branches == []`],
   )
 ]
 
@@ -66,20 +66,20 @@ def is_treeil(t):
   #multi-choice(
     cols: 2,
     none-above: false,
-    [`sum`], [`max`], [`min`], [`len`], [`any`], [`all`],
+    [`sum`], [`max`], [`min`], correct()[`len`], [`any`], [`all`],
   )
 ]
 
 #part(points: 2)[
   Fill in blank (c).
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`t.label == b.label`]
 ]
 
 #part(points: 1)[
   Fill in blank (d).
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`match_one`]
 ]
 
 #part(points: 1)[
@@ -88,12 +88,12 @@ def is_treeil(t):
   #multi-choice(
     cols: 2,
     none-above: false,
-    [`sum`], [`max`], [`min`], [`len`], [`any`], [`all`],
+    [`sum`], [`max`], [`min`], [`len`], [`any`], correct()[`all`],
   )
 ]
 
 #part(points: 1)[
   Fill in blank (f).
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`is_treeil(b)`]
 ]

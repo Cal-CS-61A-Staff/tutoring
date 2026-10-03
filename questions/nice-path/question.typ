@@ -40,5 +40,5 @@ def max_path(t, g):
 ```
 
 #part(points: 0)[
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`g(x + max_path(b, lambda p: g(x + p)))`]
 ]

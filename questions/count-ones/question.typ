@@ -36,7 +36,7 @@ def count_ones(t):
   #multi-choice(
     cols: 2,
     none-above: false,
-    [`b`],
+    correct()[`b`],
     [`t`],
     [`b.branches`],
     [`t.branches`],
@@ -49,11 +49,11 @@ def count_ones(t):
   #multi-choice(
     cols: 2,
     none-above: false,
-    [`True`],
+    correct()[`True`],
     [`is_leaf(b)`],
     [`is_leaf(t)`],
     [`len(b.branches) == 1`],
-    [`len(t.branches) == 1`],
+    correct()[`len(t.branches) == 1`],
   )
 ]
 

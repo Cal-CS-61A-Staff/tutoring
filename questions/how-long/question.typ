@@ -40,7 +40,7 @@ def longer(s, t):
 #part(points: 2)[
   Fill in blank (a).
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`isinstance(a, Link)`]
 ]
 
 #part(points: 1)[
@@ -49,7 +49,7 @@ def longer(s, t):
   #multi-choice(
     cols: 2,
     none-above: false,
-    [`a`], [`b`], [`s`], [`t`], [`longer(a, b)`], [`longer(s, t)`],
+    [`a`], [`b`], [`s`], correct()[`t`], [`longer(a, b)`], [`longer(s, t)`],
   )
 ]
 
@@ -63,7 +63,7 @@ def longer(s, t):
     [`a = s.rest`],
     [`b = b.rest`],
     [`b = t.rest`],
-    [`a, b = a.rest, b.rest`],
+    correct()[`a, b = a.rest, b.rest`],
     [`a, b = s.rest, t.rest`],
   )
 ]
@@ -74,6 +74,6 @@ def longer(s, t):
   #multi-choice(
     cols: 2,
     none-above: false,
-    [`a`], [`b`], [`s`], [`t`], [`longer(a, b)`], [`longer(s, t)`],
+    [`a`], [`b`], correct()[`s`], [`t`], [`longer(a, b)`], [`longer(s, t)`],
   )
 ]

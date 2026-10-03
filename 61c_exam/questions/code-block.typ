@@ -53,7 +53,7 @@
 }
 
 #let code_block(it, ans-space: 0.5em, disp-nums: false, post-pad: 0em) = {
-  set text(font: "DejaVu Sans Mono", size: 8pt, weight: 400)
+  set text(font: "DejaVu Sans Mono", size: 9pt, weight: 400)
   set text(top-edge: 0pt)
   set align(top)
     

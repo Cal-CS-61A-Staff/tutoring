@@ -39,7 +39,7 @@ def list_skipper(int_lst):
 #part(points: 1)[
   What line of code could go in blank (a)?
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`[[]]`]
 ]
 
 #part(points: 1)[
@@ -50,7 +50,7 @@ def list_skipper(int_lst):
     none-above: false,
     [`list_skipper(int_lst)`],
     [`list_skipper(int_lst[1:])`],
-    [`list_skipper(int_lst[2:])`],
+    correct()[`list_skipper(int_lst[2:])`],
     [`list_skipper(int_lst[0])`],
     [`list_skipper(int_lst[:-1])`],
   )
@@ -59,7 +59,7 @@ def list_skipper(int_lst):
 #part(points: 1)[
   What line of code could go in blank (c)?
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`list_skipper(int_lst[1:])`]
 ]
 
 #part(points: 1)[
@@ -71,7 +71,7 @@ def list_skipper(int_lst):
     [`x`],
     [`x[0]`],
     [`[x[0]] + int_lst`],
-    [`[int_lst[0]] + x`],
+    correct()[`[int_lst[0]] + x`],
     [`int_lst.append(x)`],
     [`x.append(int_lst)`],
   )
@@ -85,6 +85,6 @@ def list_skipper(int_lst):
     none-above: false,
     [`x[0] < int_lst[0]`],
     [`x < int_lst[0]`],
-    [`x[0] > int_lst[0]`],
+    correct()[`x[0] > int_lst[0]`],
   )
 ]

@@ -48,7 +48,7 @@ def tens(s):
     [`isinstance(s, Link)`],
     [`isinstance(s.rest, Link)`],
     [`isinstance(s.rest.rest, Link)`],
-    [`isinstance(suffix, Link)`],
+    correct()[`isinstance(suffix, Link)`],
     [`isinstance(suffix.rest, Link)`],
     [`isinstance(suffix.rest.rest, Link)`],
   )
@@ -57,11 +57,11 @@ def tens(s):
 #part(points: 2)[
   Fill in blank (e).
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`f(suffix.rest, total + suffix.first)`]
 ]
 
 #part(points: 2)[
   Fill in blank (f).
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`f(s.rest, s.first)`]
 ]

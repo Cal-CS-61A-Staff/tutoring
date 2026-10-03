@@ -43,7 +43,7 @@ def longest(s, n):
     none-above: false,
     [`longest(s, n)`],
     [`longest(s, n - s.first)`],
-    [`longest(s.rest, n)`],
+    correct()[`longest(s.rest, n)`],
     [`longest(s.rest, n - s.first)`],
   )
 ]
@@ -51,11 +51,11 @@ def longest(s, n):
 #part(points: 2)[
   Fill in blank (f).
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`s.first <= n`]
 ]
 
 #part(points: 3)[
   Fill in blank (g).
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`Link(s.first, longest(s.rest, n - s.first))`]
 ]

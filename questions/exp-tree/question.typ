@@ -97,7 +97,7 @@ def exp_tree(values):
     cols: 2,
     none-above: false,
     [`len(values) == 0`],
-    [`len(values) == 1`],
+    correct()[`len(values) == 1`],
     [`values`],
     [`len(values) == 2`],
     [`values[0] < values[1]`],
@@ -115,7 +115,7 @@ def exp_tree(values):
     [`0`],
     [`Tree(0)`],
     [`values[0]`],
-    [`Tree(values[0])`],
+    correct()[`Tree(values[0])`],
     [`values[1]`],
     [`Tree(values[1])`],
     [`values[0] ** values[1]`],
@@ -128,23 +128,23 @@ def exp_tree(values):
 #part(points: 1)[
   What line of code could go in blank (c)?
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`values[:i]`]
 ]
 
 #part(points: 1)[
   What line of code could go in blank (d)?
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`values[i:]`]
 ]
 
 #part(points: 1)[
   What line of code could go in blank (e)?
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`base.label ** exponent.label`]
 ]
 
 #part(points: 1)[
   What line of code could go in blank (f)?
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`lambda t: t.label`]
 ]

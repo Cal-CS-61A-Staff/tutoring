@@ -52,7 +52,7 @@ def max_treeil(t):
   #multi-choice(
     cols: 2,
     none-above: false,
-    [`is_treeil(t)`],
+    correct()[`is_leaf(t)`],
     [`not is_treeil(t)`],
     [`is_leaf(t)`],
     [`is_treeil(t) or is_leaf(t)`],
@@ -63,7 +63,7 @@ def max_treeil(t):
 #part(points: 1.5)[
   Fill in blank (b).
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`is_treeil(t)`]
 ]
 
 #part(points: 1)[
@@ -74,7 +74,7 @@ def max_treeil(t):
     none-above: false,
     [`max([max_treeil(b) for b in t.branches])`],
     [`len([max_treeil(b) for b in t.branches])`],
-    [`sum([max_treeil(b) for b in t.branches])`],
+    correct()[`sum([max_treeil(b) for b in t.branches])`],
     [`sum([b for b in t.branches if is_treeil(b)])`],
     [`len([b for b in t.branches if is_treeil(b)])`],
   )
@@ -83,5 +83,5 @@ def max_treeil(t):
 #part(points: 1.5)[
   Fill in blank (d).
 
-  #answer_box(width: 440pt, height: 30pt)[]
+  #answer_box(width: 440pt, height: 30pt)[`max_treeil(b)`]
 ]
