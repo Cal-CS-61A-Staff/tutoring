@@ -53,7 +53,7 @@ def count_ones(t):
     [`is_leaf(b)`],
     [`is_leaf(t)`],
     [`len(b.branches) == 1`],
-    correct()[`len(t.branches) == 1`],
+    [`len(t.branches) == 1`],
   )
 ]
 
@@ -67,7 +67,7 @@ def count_ones(t):
     [`is_leaf(b)`],
     [`is_leaf(t)`],
     [`len(b.branches) == 1`],
-    [`len(t.branches) == 1`],
+    correct()[`len(t.branches) == 1`],
     [`all([len(b.branches) == 1 for b in t.branches])`],
     [`any([len(b.branches) == 1 for b in t.branches])`],
   )

@@ -40,7 +40,7 @@ def longer(s, t):
 #part(points: 2)[
   Fill in blank (a).
 
-  #answer_box(width: 440pt, height: 30pt)[`isinstance(a, Link)`]
+  #answer_box(width: 440pt, height: 30pt)[` not isinstance(a, Link)`]
 ]
 
 #part(points: 1)[
