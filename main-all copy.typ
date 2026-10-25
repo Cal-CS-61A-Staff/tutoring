@@ -16,22 +16,22 @@
 #include "questions/iterators-are-inevitable/question.typ"
 #pagebreak()
 
-#include "questions/hog-revisited/question.typ"
-#pagebreak()
+// #include "questions/hog-revisited/question.typ"
+// #pagebreak()
 
-#include "questions/do-you-yield/question.typ"
-#pagebreak()
+// #include "questions/do-you-yield/question.typ"
+// #pagebreak()
 
-#include "questions/off-to-the-races/question.typ"
-#pagebreak()
+// #include "questions/off-to-the-races/question.typ"
+// #pagebreak()
 
-#include "questions/mapping-and-counting/question.typ"
-#pagebreak()
+// #include "questions/mapping-and-counting/question.typ"
+// #pagebreak()
 
-#include "questions/thumper/question.typ"
-#pagebreak()
+// #include "questions/thumper/question.typ"
+// #pagebreak()
 
 #include "questions/we-are-all-the-same/question.typ"
 #pagebreak()
 
-#include "questions/trictionary-or-treat/question.typ"
+// #include "questions/trictionary-or-treat/question.typ"
