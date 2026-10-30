@@ -11,10 +11,6 @@ Implement `make_necklace`, which creates a linked list whose values repeat the
 strings in `beads` in order until the result has `length` elements. Assume
 `beads` is non-empty and `length` is non-negative.
 
-Use the new CS 61A `LinkedList` and `Link` definitions on the reference page.
-In particular, the empty linked list is `()` and a non-empty linked list is a
-generic `Link[T]` dataclass.
-
 ```python
 def make_necklace(beads: list[str], length: int) -> LinkedList[str]:
     """Return a linked list of LENGTH beads, repeating BEADS in order.
@@ -46,14 +42,16 @@ def make_necklace(beads: list[str], length: int) -> LinkedList[str]:
 #part(points: 1)[
   Fill in blank (b).
 
-  #multi-choice(
-    cols: 3,
-    none-above: false,
-    correct()[`()`],
-    [`None`],
-    [`Link()`],
-    [`[]`],
-  )
+  #box(width: 100%)[
+    #multi-choice(
+      cols: 4,
+      none-above: false,
+      correct()[`()`],
+      [`None`],
+      [`Link()`],
+      [`[]`],
+    )
+  ]
 ]
 
 #part(points: 1)[

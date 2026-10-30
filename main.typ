@@ -13,19 +13,22 @@
 
 #show link: underline
 
-#include "questions/reference/question.typ"
+#include "questions/linked-lists/beadazzled/question.typ"
 #pagebreak()
 
-#include "questions/linked-lists/beadazzled/question.typ"
+#include "questions/gleam/reference/question.typ"
 #pagebreak()
 
 #include "questions/gleam/beadazzled/question.typ"
 #pagebreak()
 
-#include "questions/gleam/remove-parens/question.typ"
-#pagebreak()
-
-#include "questions/gleam/fib2-countdowns/question.typ"
-#pagebreak()
-
 #include "questions/gleam/treequality/question.typ"
+#pagebreak()
+
+#include "questions/gleam/shrink/question.typ"
+#pagebreak()
+
+#include "questions/gleam/split/question.typ"
+#pagebreak()
+
+#include "questions/gleam/rotate/question.typ"

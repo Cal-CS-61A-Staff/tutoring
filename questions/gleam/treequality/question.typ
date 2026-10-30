@@ -47,16 +47,16 @@ assert all([]) == True
   )
 ]
 
-#part(points: 2)[
-  Is `all` tail recursive?
+// #part(points: 2)[
+//   Is `all` tail recursive?
 
-  #multi-choice(
-    cols: 1,
-    none-above: false,
-    correct()[Yes. When the recursive call is reached, its value is returned directly.],
-    [No. The `&&` operator always performs another operation after the recursive call.],
-  )
-]
+//   #multi-choice(
+//     cols: 1,
+//     none-above: false,
+//     correct()[Yes. When the recursive call is reached, its value is returned directly.],
+//     [No. The `&&` operator always performs another operation after the recursive call.],
+//   )
+// ]
 
 #pagebreak()
 
@@ -99,16 +99,16 @@ assert zip(["a", "b"], [1, 2, 3]) == [#("a", 1), #("b", 2)]
   )
 ]
 
-#part(points: 2)[
-  Is `zip` tail recursive?
+// #part(points: 2)[
+//   Is `zip` tail recursive?
 
-  #multi-choice(
-    cols: 1,
-    none-above: false,
-    [Yes. The recursive call is the last text in the function.],
-    correct()[No. The tuple is added to the front only after the recursive call returns.],
-  )
-]
+//   #multi-choice(
+//     cols: 1,
+//     none-above: false,
+//     [Yes. The recursive call is the last text in the function.],
+//     correct()[No. The tuple is added to the front only after the recursive call returns.],
+//   )
+// ]
 
 // Gleam tuples allow zip's two inputs to have different element types while
 // preserving the two-item pairing from the original exercise.
