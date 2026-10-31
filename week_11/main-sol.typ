@@ -6,7 +6,8 @@
   class: "CS 61A",
   semester: "Past Exam Practice",
   instructors: (" "),
-  exam: "Gleam and Linked Lists - Solutions",
+  exam: "Gleam and Linked Lists 
+  - Solutions",
   print_answers: true,
 )
 
@@ -24,10 +25,16 @@
 #include "../questions/gleam/treequality/question.typ"
 #pagebreak()
 
-#include "../questions/gleam/shrink/question.typ"
-#pagebreak()
-
 #include "../questions/gleam/split/question.typ"
 #pagebreak()
 
 #include "../questions/gleam/rotate/question.typ"
+#pagebreak()
+
+#include "../questions/gleam/shrink/question.typ"
+#pagebreak()
+
+#include "../questions/gleam/dont-skip-this/question.typ"
+#pagebreak()
+
+#include "../questions/gleam/after-party/question.typ"

@@ -4,7 +4,7 @@
 = Shrink to Fit
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Summer 2026 - 6B - Question 5 | *Level:* Regular
+  *Adapted from:* Summer 2026 - 6B - Question 5 | *Level:* Challenge
 ]
 
 The function `shrink` returns a function. The returned function processes a

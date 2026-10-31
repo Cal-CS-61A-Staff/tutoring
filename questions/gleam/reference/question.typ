@@ -79,6 +79,7 @@
     Useful standard-library functions:
 
     - `list.append(xs, ys)` joins two lists.
+    - `list.map(xs, f)` applies `f` to each value.
     - `list.filter(xs, keep)` keeps values satisfying `keep`.
     - `list.length(xs)` returns a list's length.
     - `int.absolute_value(n)` returns an integer's absolute value.
