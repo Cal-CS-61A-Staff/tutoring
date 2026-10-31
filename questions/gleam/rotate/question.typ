@@ -4,7 +4,7 @@
 = Rotation Situation
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Summer 2026 - 6B - Question 7 | *Level:* Regular
+  *Adapted from:* Summer 2026 - 6B - Question 7 | *Level:* Challenge
 ]
 
 Implement `rotate`, which shifts all elements of a list `lst` left by `k`
