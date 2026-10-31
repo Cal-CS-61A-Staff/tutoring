@@ -31,8 +31,8 @@
 #include "../questions/gleam/rotate/question.typ"
 #pagebreak()
 
-#include "../questions/gleam/shrink/question.typ"
-#pagebreak()
+// #include "../questions/gleam/shrink/question.typ"
+// #pagebreak()
 
 #include "../questions/gleam/dont-skip-this/question.typ"
 #pagebreak()
