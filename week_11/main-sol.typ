@@ -1,0 +1,33 @@
+#import "../61c_exam/lib.typ": *
+
+#set document(title: "CS 61A Gleam and Linked Lists - Solutions")
+
+#show: exam.with(
+  class: "CS 61A",
+  semester: "Past Exam Practice",
+  instructors: (" "),
+  exam: "Gleam and Linked Lists - Solutions",
+  print_answers: true,
+)
+
+#show link: underline
+
+#include "../questions/linked-lists/beadazzled/question.typ"
+#pagebreak()
+
+#include "../questions/gleam/reference/question.typ"
+#pagebreak()
+
+#include "../questions/gleam/beadazzled/question.typ"
+#pagebreak()
+
+#include "../questions/gleam/treequality/question.typ"
+#pagebreak()
+
+#include "../questions/gleam/shrink/question.typ"
+#pagebreak()
+
+#include "../questions/gleam/split/question.typ"
+#pagebreak()
+
+#include "../questions/gleam/rotate/question.typ"
