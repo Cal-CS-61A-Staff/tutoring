@@ -4,7 +4,7 @@
 = Beadazzled, the Gleam-quel
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Spring 2022 Final - Question 11 | *Level:* Regular
+  *Adapted from:* Spring 2022 Final - Question 11 | *Level:* Challenge
 ]
 
 Implement `make_necklace`, which returns a Gleam list whose values repeat the
