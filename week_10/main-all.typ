@@ -1,4 +1,4 @@
-#import "61c_exam/lib.typ": *
+#import "../61c_exam/lib.typ": *
 
 #set document(title: "CS 61A Generators and Counting")
 
@@ -13,25 +13,25 @@
 
 #show link: underline
 
-#include "questions/iterators-are-inevitable/question.typ"
+#include "../questions/iterators-generators/iterators-are-inevitable/question.typ"
 #pagebreak()
 
-// #include "questions/hog-revisited/question.typ"
+// #include "../questions/iterators-generators/hog-revisited/question.typ"
 // #pagebreak()
 
-// #include "questions/do-you-yield/question.typ"
+// #include "../questions/iterators-generators/do-you-yield/question.typ"
 // #pagebreak()
 
-// #include "questions/off-to-the-races/question.typ"
+// #include "../questions/counting/off-to-the-races/question.typ"
 // #pagebreak()
 
-// #include "questions/mapping-and-counting/question.typ"
+// #include "../questions/counting/mapping-and-counting/question.typ"
 // #pagebreak()
 
-// #include "questions/thumper/question.typ"
+// #include "../questions/iterators-generators/thumper/question.typ"
 // #pagebreak()
 
-#include "questions/we-are-all-the-same/question.typ"
+#include "../questions/iterators-generators/we-are-all-the-same/question.typ"
 #pagebreak()
 
-// #include "questions/trictionary-or-treat/question.typ"
+// #include "../questions/trees/trictionary-or-treat/question.typ"

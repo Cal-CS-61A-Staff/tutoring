@@ -137,6 +137,7 @@
   // created using ```
   show raw.where(block: true, lang: "py"): it => code_block(it, disp-nums: true, post-pad: 1em)
   show raw.where(block: true, lang: "python"): it => code_block(it, disp-nums: true, post-pad: 1em)
+  show raw.where(block: true, lang: "gleam"): it => code_block(it, disp-nums: true, post-pad: 1em)
   show raw.where(block: true, lang: "sql"): it => code_block(it, disp-nums: true, post-pad: 1em)
   show raw.where(block: true, lang: "txt"): it => code_block(it, disp-nums: false, post-pad: 1em)
 
