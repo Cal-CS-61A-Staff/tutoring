@@ -59,13 +59,13 @@ assert befriend(my_pen, "Clarice", "Alice")
 
 ```
 
-#part(points: 1)[
+#part[
   Fill in blank (a).
 
   #answer_box(width: 100%)[`dict.insert(pen.animals, name, Animal(name, []))`]
 ]
 
-#part(points: 2)[
+#part[
   Fill in blanks (b) and (c).
 
   #grid(
@@ -76,21 +76,21 @@ assert befriend(my_pen, "Clarice", "Alice")
   )
 ]
 
-#part(points: 1)[
+#part[
   Fill in blank (d).
 
   #answer_box(width: 70%)[`[b, ..x.friends]`]
 ]
 
 #block(breakable: false)[
-  #part(points: 2)[
+  #part[
     Fill in blank (e).
 
     #answer_box(width: 100%)[`dict.insert(dict.insert(pen.animals, a, new_x), b, new_y)`]
   ]
 ]
 
-#part(points: 1)[
+#part[
   After `befriend(my_pen, "Clarice", "Alice")` in the doctests above, what does
   `dict.get(my_pen.animals, "Alice")` evaluate to?
 

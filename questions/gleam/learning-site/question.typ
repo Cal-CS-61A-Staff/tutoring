@@ -123,37 +123,37 @@ pub fn count_videos(s: LearningSite) -> Int {
 }
 ```
 
-#part(points: 1)[
+#part[
   Fill in blank (a).
 
   #answer_box(width: 100%)[`dict.insert(s.catalog, content.details.title, content)`]
 ]
 
-#part(points: 1)[
+#part[
   Fill in blank (b).
 
   #answer_box(width: 90%)[`dict.get(s.catalog, title)`]
 ]
 
-#part(points: 1)[
+#part[
   Fill in blank (c).
 
   #answer_box(width: 100%)[`LearningSite(..s, watched: list.append(s.watched, [content]))`]
 ]
 
-#part(points: 1)[
+#part[
   Fill in blank (d).
 
   #answer_box(width: 90%)[`LearningSite(..s, missing: [title, ..s.missing])`]
 ]
 
-#part(points: 1)[
+#part[
   Fill in blank (e).
 
   #answer_box(width: 90%)[`list.map(s.watched, description)`]
 ]
 
-#part(points: 3)[
+#part[
   Fill in blanks (f), (g), and (h).
 
   #grid(
@@ -165,13 +165,13 @@ pub fn count_videos(s: LearningSite) -> Int {
   )
 ]
 
-#part(points: 1)[
+#part[
   Fill in blank (i).
 
   #answer_box(width: 70%)[`content`]
 ]
 
-#part(points: 2)[
+#part[
   Fill in blanks (j) and (k).
 
   #grid(
