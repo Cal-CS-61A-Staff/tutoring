@@ -63,9 +63,6 @@ Implement the following functions for the online learning site:
 - `fn count_videos(s: LearningSite) -> Int`: return how many of the watched contents are videos. A video
   that was watched twice counts twice.
 
-`list.append(xs, ys)` returns a new list containing the elements of `xs`
-followed by the elements of `ys`.
-
 ```gleam
 let cs61a = LearningSite(dict.new(), [], [])
 let recursion = Exercise(Details("Recursion", "Chris D"), 5)

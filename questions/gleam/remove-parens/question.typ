@@ -32,6 +32,7 @@ let entry_list0 = [
   Folder([File("Hello.txt")]),
   File("World.txt")
 ]
+
 assert list_files(entry_list0) == ["Hello.txt", "World.txt"]
 
 let entry_list1 = [
@@ -39,13 +40,16 @@ let entry_list1 = [
   File("d.txt"),
   Folder([File("e.txt"), Folder([File("f.txt")])])
 ]
+
 assert list_files(entry_list1) == ["a.txt", "b.txt", "c.txt", "d.txt", "e.txt", "f.txt"]
 
-assert list_files([
+let entry_list2 = [
   Folder([File("a.txt"), Folder([File("b.txt"), File("c.txt")])]),
   Folder([]),
   File("d.txt")
-]) == ["a.txt", "b.txt", "c.txt", "d.txt"]
+]
+
+assert list_files(entry_list2) == ["a.txt", "b.txt", "c.txt", "d.txt"]
 ```
 
 #part[
