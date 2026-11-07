@@ -4,7 +4,7 @@
 = Online Learning Site
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Spring 2021 - Midterm 2 - Question 5 | *Level:* Regular
+  *Adapted from:* Spring 2021 - Midterm 2 - Question 5 | *Level:* Regular-Hard
 ]
 
 An online learning site is described by the `LearningSite` record, which keeps track

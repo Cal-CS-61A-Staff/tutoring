@@ -131,8 +131,8 @@
     keys of type `k` and values of type `v`. Dicts are immutable.
 
     - `dict.new()` is an empty dict.
-    - `dict.from_list(pairs)` builds a dict from a list of `#(k, v)` tuples.
-    - `dict.insert(d, k, v)` returns a new dict where `k` maps to `v`.
+    - `dict.insert(d, k, v)` returns a new dict where `k` maps to `v`, and contains all
+      the key value pairs of dict d.
     - `dict.get(d, k)` returns `Ok(v)` if `k` maps to `v`, or `Error(Nil)` if
       `k` is not a key.
   ],

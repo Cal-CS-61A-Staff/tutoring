@@ -1,71 +1,71 @@
 #import "../../../61c_exam/lib.typ": *
 #import "../../../61c_exam/questions/answer-box.typ": answer_box
 
-= A Parentheses Gleam
+= No More Folders!!
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Fall 2018 Final - Question 8 | *Level:* Regular
+  *Level:* Regular
 ]
 
-A `Nested(a)` value is either an `Atom` containing one value or a `Group`
-containing a list of nested values. Implement `remove_parens`, which removes
-all `Group` boundaries and returns the atoms from left to right.
-
-`list.append(xs, ys)` returns a new list containing the elements of `xs`
-followed by the elements of `ys`.
+An `Entry` value is either a `File` containing its name or a `Folder` containing a list of entries. Implement `list_files`,
+which takes in a list of Entry records `entries` and returns a list of strings which are the file names of every file in `entries`.
 
 ```gleam
 import gleam/list
 
-pub type Nested(a) {
-  Atom(a)
-  Group(List(Nested(a)))
+pub type Entry {
+  File(name: String)
+  Folder(contents: List(Entry))
 }
 
-pub fn remove_parens(s: List(Nested(a))) -> List(a) {
-  case s {
+pub fn list_files(entries: List(Entry)) -> List(String) {
+  case entries {
     [] -> []
-    [Group(items), ..rest] ->
+    [Folder(contents), ..rest] ->
       list.append(_______, _______)             // (a), (b)
-    [Atom(value), ..rest] ->
+    [File(name), ..rest] ->
       [_______, .._______]                      // (c), (d)
   }
 }
 
-assert remove_parens([
-  Group([Group([Atom(1)]), Atom(2), Atom(3)]),
-  Atom(4),
-  Group([Atom(5), Group([Atom(6)])]),
-]) == [1, 2, 3, 4, 5, 6]
+let entry_list0 = [
+  Folder([File("Hello.txt")]),
+  File("World.txt")
+]
+assert list_files(entry_list0) == ["Hello.txt", "World.txt"]
 
-assert remove_parens([
-  Group([Atom("a"), Group([Atom("b"), Atom("c")])]),
-  Group([]),
-  Atom("d"),
-]) == ["a", "b", "c", "d"]
+let entry_list1 = [
+  Folder([Folder([File("a.txt")]), File("b.txt"), File("c.txt")]),
+  File("d.txt"),
+  Folder([File("e.txt"), Folder([File("f.txt")])])
+]
+assert list_files(entry_list1) == ["a.txt", "b.txt", "c.txt", "d.txt", "e.txt", "f.txt"]
+
+assert list_files([
+  Folder([File("a.txt"), Folder([File("b.txt"), File("c.txt")])]),
+  Folder([]),
+  File("d.txt")
+]) == ["a.txt", "b.txt", "c.txt", "d.txt"]
 ```
 
-#part(points: 3)[
+#part[
   Fill in blanks (a) and (b).
 
   #grid(
     columns: (1fr, 1fr),
     column-gutter: 1em,
-    answer_box(width: 100%, pre: [(a)#h(0.6em)])[`remove_parens(items)`],
-    answer_box(width: 100%, pre: [(b)#h(0.6em)])[`remove_parens(rest)`],
+    answer_box(width: 100%, pre: [(a)#h(0.6em)])[`list_files(contents)`],
+    answer_box(width: 100%, pre: [(b)#h(0.6em)])[`list_files(rest)`],
   )
 ]
 
-#part(points: 3)[
+#part[
   Fill in blanks (c) and (d).
 
   #grid(
     columns: (1fr, 1fr),
     column-gutter: 1em,
-    answer_box(width: 100%, pre: [(c)#h(0.6em)])[`value`],
-    answer_box(width: 100%, pre: [(d)#h(0.6em)])[`remove_parens(rest)`],
+    answer_box(width: 100%, pre: [(c)#h(0.6em)])[`name`],
+    answer_box(width: 100%, pre: [(d)#h(0.6em)])[`list_files(rest)`],
   )
 ]
-
-// Nested is generic so the same implementation works for integers, strings,
-// or any other single atom type while preserving Gleam's homogeneous lists.

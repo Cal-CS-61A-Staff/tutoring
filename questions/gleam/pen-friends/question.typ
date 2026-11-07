@@ -45,14 +45,18 @@ pub fn befriend(pen: Pen, a: String, b: String) -> Result(Pen, String) {
 
 let my_pen = add_animal(add_animal(Pen("coop", dict.new()), "Alice"), "Clarice")
 let other_pen = add_animal(Pen("barn", dict.new()), "Bob")
+
 assert dict.get(other_pen.animals, "Bob") == Ok(Animal("Bob", []))
+
 assert befriend(my_pen, "Clarice", "Bob")
   == Error("Cannot befriend an animal that doesn't share a pen!")
+
 assert befriend(my_pen, "Clarice", "Alice")
   == Ok(Pen("coop", dict.from_list([
     #("Alice", Animal("Alice", ["Clarice"])),
     #("Clarice", Animal("Clarice", ["Alice"])),
   ])))
+
 ```
 
 #part(points: 1)[
@@ -87,11 +91,11 @@ assert befriend(my_pen, "Clarice", "Alice")
 ]
 
 #part(points: 1)[
-  In the original Python version, `befriend` changed both animals in place.
-  After `befriend(my_pen, "Clarice", "Alice")` above, what does
+  After `befriend(my_pen, "Clarice", "Alice")` in the doctests above, what does
   `dict.get(my_pen.animals, "Alice")` evaluate to?
 
-  #answer_box(width: 70%)[`Ok(Animal("Alice", []))`]
+  #answer_box(width: 70%)[Recall that Gleam records are immuable. The my_pen object is therefore
+  unchanged from the befriend call mentioned in the question. The answer is `Ok(Animal("Alice", []))`]
 ]
 
 // Gleam records cannot point back to their pen, so the pen holds its animals by

@@ -1,10 +1,10 @@
 #import "../../../61c_exam/lib.typ": *
 #import "../../../61c_exam/questions/answer-box.typ": answer_box
 
-= Off to the Races
+= Efficiency Practice
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Original source:* Spring 2026 Midterm 2 - Question 9 (adapted to a single-line count and loop iteration counts) | *Level:* Regular
+  *Adapted From:* Spring 2026 Midterm 2 - Question 9 | *Level:* Regular
 ]
 
 Both functions keep only the words shorter than `length`. Each question asks for one count for an input linked list containing `n` words. For loops, count how many times the body runs; do not count condition checks.

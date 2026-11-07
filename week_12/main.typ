@@ -13,7 +13,7 @@
 
 #show link: underline
 
-#include "../questions/counting/off-to-the-races/question.typ"
+#include "../questions/counting/efficiency-practice/question.typ"
 #pagebreak()
 
 #include "../questions/gleam/reference/question.typ"
@@ -23,9 +23,6 @@
 #pagebreak()
 
 #include "../questions/gleam/learning-site/question.typ"
-#pagebreak()
-
-#include "../questions/gleam/world-cup/question.typ"
 #pagebreak()
 
 #include "../questions/gleam/pen-friends/question.typ"
