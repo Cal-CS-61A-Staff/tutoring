@@ -1,10 +1,10 @@
 #import "../../../61c_exam/lib.typ": *
 #import "../../../61c_exam/questions/answer-box.typ": answer_box
 
-= Off to the Races
+= Efficiency Practice
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Original source:* Spring 2026 Midterm 2 - Question 9 (adapted to a single-line count and loop iteration counts) | *Level:* Regular
+  *Adapted From:* Spring 2026 Midterm 2 - Question 9 | *Level:* Regular
 ]
 
 Both functions keep only the words shorter than `length`. Each question asks for one count for an input linked list containing `n` words. For loops, count how many times the body runs; do not count condition checks.
@@ -20,7 +20,7 @@ def remove_long_words1(links, length):
     return Link(links.first, remove_long_words1(links.rest, length))
 ```
 
-#part(points: 2)[
+#part[
   For an input list of `n` words, how many times does line A run in total?
 
   #answer_box(width: 40%)[n times]
@@ -46,13 +46,13 @@ def remove_long_words2(links, length):
     return head
 ```
 
-#part(points: 2)[
+#part[
   Suppose the input contains `n >= 1` words and the first word is shorter than `length`. How many times does the body of Loop 2 run?
 
   #answer_box(width: 40%)[n - 1 times]
 ]
 
-#part(points: 2)[
+#part[
   Now suppose all `n` words have length greater than or equal to `length`. How many times does the body of Loop 1 run?
 
   #answer_box(width: 40%)[n times]
