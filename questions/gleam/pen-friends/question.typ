@@ -94,7 +94,7 @@ assert befriend(my_pen, "Clarice", "Alice")
   After `befriend(my_pen, "Clarice", "Alice")` in the doctests above, what does
   `dict.get(my_pen.animals, "Alice")` evaluate to?
 
-  #answer_box(width: 70%)[Recall that Gleam records are immuable. The my_pen object is therefore
+  #answer_box(width: 100%, height: 4 * 12pt)[Recall that Gleam records are immuable. The my_pen object is therefore
   unchanged from the befriend call mentioned in the question. The answer is `Ok(Animal("Alice", []))`]
 ]
 
