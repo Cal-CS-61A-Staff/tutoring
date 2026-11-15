@@ -4,7 +4,7 @@
 = Evals All the Way Down
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Scheme final exam eval and apply counting | *Level:* Challenge
+  *Adapted from:* Fall 2015 Final - Question 6(c) and Summer 2016 Final - Question 6(c) | *Level:* Challenge
 ]
 
 Implement `count_evals`, which takes an `Expr` and returns how many calls are

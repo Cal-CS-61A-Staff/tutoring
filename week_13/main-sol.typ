@@ -16,19 +16,19 @@
 #include "../questions/interpreters/reference/question.typ"
 #pagebreak()
 
-#include "../questions/interpreters/representing-code/question.typ"
+#include "../questions/browsers/browser-basics/question.typ"
 #pagebreak()
 
 #include "../questions/interpreters/eval-apply-counts/question.typ"
+#pagebreak()
+
+#include "../questions/interpreters/representing-code/question.typ"
 #pagebreak()
 
 #include "../questions/interpreters/case-counter/question.typ"
 #pagebreak()
 
 #include "../questions/interpreters/calculator/question.typ"
-#pagebreak()
-
-#include "../questions/browsers/browser-basics/question.typ"
 #pagebreak()
 
 #include "../questions/interpreters/scope/question.typ"

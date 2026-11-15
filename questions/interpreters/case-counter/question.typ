@@ -4,7 +4,7 @@
 = Case Counter
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Scheme final exam Match Counter | *Level:* Regular
+  *Adapted from:* Summer 2023 Final - Question 6b and Summer 2025 Final - Question 7(g) | *Level:* Regular
 ]
 
 Assume the following code has already been evaluated in the Animator project's

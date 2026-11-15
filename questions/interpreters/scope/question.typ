@@ -4,7 +4,7 @@
 = Scope It Out
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Scheme final exam scope question | *Level:* Regular-Hard
+  *Adapted from:* Spring 2019 Final - Question 5 | *Level:* Regular
 ]
 
 The Animator project's evaluator uses lexical scope. Suppose we changed it to use

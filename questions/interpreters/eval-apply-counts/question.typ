@@ -4,7 +4,7 @@
 = Count the Calls
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Scheme final exam eval and apply counting | *Level:* Regular, Challenge
+  *Adapted from:* Summer 2016 Final - Question 6(c) | *Level:* Regular, Challenge
 ]
 
 For each Gleam expression below, choose the number of calls that would be made
