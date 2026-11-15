@@ -1,4 +1,4 @@
-#import "61c_exam/lib.typ": *
+#import "../61c_exam/lib.typ": *
 
 #set document(title: "CS 61A Linked Lists and Trees Practice - Solutions")
 
@@ -12,46 +12,46 @@
 
 #show link: underline
 
-#include "questions/reference/question.typ"
+#include "../questions/reference/question.typ"
 #pagebreak()
 
-// #include "questions/treeils/question.typ"
+// #include "../questions/trees/treeils/question.typ"
 // #pagebreak()
 
-// #include "questions/treeil-trail/question.typ"
+// #include "../questions/trees/treeil-trail/question.typ"
 // #pagebreak()
 
-// #include "questions/prefixes/question.typ"
+// #include "../questions/linked-lists/prefixes/question.typ"
 // #pagebreak()
 
-// #include "questions/count-ones/question.typ"
+// #include "../questions/trees/count-ones/question.typ"
 // #pagebreak()
 
-// #include "questions/how-long/question.typ"
+// #include "../questions/linked-lists/how-long/question.typ"
 // #pagebreak()
 
-// #include "questions/longest/question.typ"
+// #include "../questions/linked-lists/longest/question.typ"
 // #pagebreak()
 
-// #include "questions/exp-tree/question.typ"
+// #include "../questions/trees/exp-tree/question.typ"
 // #pagebreak()
 
-// #include "questions/skipping-around/question.typ"
+// #include "../questions/recursion/skipping-around/question.typ"
 // #pagebreak()
 
-#include "questions/untangle/question.typ"
+#include "../questions/linked-lists/untangle/question.typ"
 #pagebreak()
 
-#include "questions/layer/question.typ"
+#include "../questions/trees/layer/question.typ"
 #pagebreak()
 
-#include "questions/cycle/question.typ"
+#include "../questions/linked-lists/cycle/question.typ"
 #pagebreak()
 
-#include "questions/promote-link/question.typ"
+#include "../questions/linked-lists/promote-link/question.typ"
 #pagebreak()
 
-#include "questions/trie-this/question.typ"
+#include "../questions/trees/trie-this/question.typ"
 #pagebreak()
 
-#include "questions/treasure-locations/question.typ"
+#include "../questions/trees/treasure-locations/question.typ"

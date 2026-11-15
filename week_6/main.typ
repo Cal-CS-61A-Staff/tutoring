@@ -1,4 +1,4 @@
-#import "61c_exam/lib.typ": *
+#import "../61c_exam/lib.typ": *
 
 #set document(title: "CS 61A Linked Lists and Trees Practice")
 
@@ -22,28 +22,28 @@
 //   margin: (top: 2cm, right: 2cm, bottom: 2cm, left: 2cm),
 // )
 
-#include "questions/reference/question.typ"
+#include "../questions/reference/question.typ"
 #pagebreak()
 
-#include "questions/treeils/question.typ"
+#include "../questions/trees/treeils/question.typ"
 #pagebreak()
 
-#include "questions/treeil-trail/question.typ"
+#include "../questions/trees/treeil-trail/question.typ"
 #pagebreak()
 
-#include "questions/prefixes/question.typ"
+#include "../questions/linked-lists/prefixes/question.typ"
 #pagebreak()
 
-#include "questions/count-ones/question.typ"
+#include "../questions/trees/count-ones/question.typ"
 #pagebreak()
 
-#include "questions/how-long/question.typ"
+#include "../questions/linked-lists/how-long/question.typ"
 #pagebreak()
 
-#include "questions/longest/question.typ"
+#include "../questions/linked-lists/longest/question.typ"
 #pagebreak()
 
-#include "questions/exp-tree/question.typ"
+#include "../questions/trees/exp-tree/question.typ"
 #pagebreak()
 
-#include "questions/skipping-around/question.typ"
+#include "../questions/recursion/skipping-around/question.typ"
