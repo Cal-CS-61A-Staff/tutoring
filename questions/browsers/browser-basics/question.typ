@@ -4,7 +4,7 @@
 = Browser Basics
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Lecture 32 - Browsers and Web Applications | *Level:* Shared
+  *Adapted from:* Lecture 32 - Browsers and Web Applications | *Level:* Regular, Challenge
 ]
 
 #part(points: 1)[
