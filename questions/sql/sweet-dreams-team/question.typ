@@ -63,7 +63,8 @@ player plays.
 )
 
 #part(points: 2, breakable: false)[
-  *Points-Per-Minute.* Write a SQL query that returns the names of the top 5
+  *Points-Per-Minute.* \
+  Write a SQL query that returns the names of the top 5
   players with the most points-per-minute (PPM) who played for at least 5
   minutes in order from highest PPM to lowest PPM. PPM is calculated as points
   divided by minutes.
@@ -91,7 +92,8 @@ player plays.
 ]
 
 #part(points: 4, breakable: false)[
-  *More Rebounds = More Points?* Write a SQL query that returns the names of NBA
+  *More Rebounds = More Points?* \
+  Write a SQL query that returns the names of NBA
   teams and average number of points scored by players that play for that NBA
   team in order from most average rebounds to least average rebounds for the
   NBA teams that have a total of 5 or more rebounds across all their players.
@@ -148,7 +150,8 @@ player plays.
 ]
 
 #part(points: 4, breakable: false)[
-  *Assists-Per-Minute.* Write a SQL query that returns each position, the name
+  *Assists-Per-Minute.* \
+  Write a SQL query that returns each position, the name
   of the one player with the most assists-per-minute (APM) in that position,
   and that player's APM value in order from highest APM to lowest APM. APM is
   calculated as assists divided by minutes. Only players who played for at
