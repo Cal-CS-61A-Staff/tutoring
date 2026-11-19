@@ -19,40 +19,47 @@ that game. The `nba_data` table contains data on which National Basketball
 Association (NBA) team each player plays for as well as which position each
 player plays.
 
-`box_scores`:
-#table(
-  columns: 5,
-  [*name*], [*minutes*], [*points*], [*rebounds*], [*assists*],
-  [LeBron James], [20.4], [14], [4], [4],
-  [Anthony Edwards], [20.6], [13], [2], [1],
-  [Stephen Curry], [21.8], [13], [2], [2],
-  [Anthony Davis], [17.6], [12], [10], [1],
-  [Joel Embiid], [16.6], [10], [7], [3],
-  [Jrue Holiday], [17.8], [8], [4], [3],
-  [Bam Adebayo], [17.6], [8], [5], [1],
-  [Devin Booker], [20.0], [7], [2], [1],
-  [Jayson Tatum], [17.8], [6], [3], [2],
-  [Micah Potter], [2.5], [3], [0], [0],
-  [Tyrese Haliburton], [14.8], [2], [2], [3],
-  [Derrick White], [11.3], [1], [2], [2],
-)
-
-`nba_data`:
-#table(
-  columns: 3,
-  [*name*], [*nba_team*], [*position*],
-  [LeBron James], [Lakers], [Forward],
-  [Anthony Edwards], [Timberwolves], [Guard],
-  [Stephen Curry], [Warriors], [Guard],
-  [Anthony Davis], [Lakers], [Center],
-  [Joel Embiid], [Sixers], [Center],
-  [Jrue Holiday], [Celtics], [Guard],
-  [Bam Adebayo], [Heat], [Center],
-  [Devin Booker], [Suns], [Guard],
-  [Jayson Tatum], [Celtics], [Forward],
-  [Micah Potter], [Jazz], [Center],
-  [Tyrese Haliburton], [Pacers], [Guard],
-  [Derrick White], [Celtics], [Guard],
+#grid(
+  columns: (auto, auto),
+  gutter: 14pt,
+  [
+    `box_scores`:
+    #table(
+      columns: 5,
+      [*name*], [*minutes*], [*points*], [*rebounds*], [*assists*],
+      [LeBron James], [20.4], [14], [4], [4],
+      [Anthony Edwards], [20.6], [13], [2], [1],
+      [Stephen Curry], [21.8], [13], [2], [2],
+      [Anthony Davis], [17.6], [12], [10], [1],
+      [Joel Embiid], [16.6], [10], [7], [3],
+      [Jrue Holiday], [17.8], [8], [4], [3],
+      [Bam Adebayo], [17.6], [8], [5], [1],
+      [Devin Booker], [20.0], [7], [2], [1],
+      [Jayson Tatum], [17.8], [6], [3], [2],
+      [Micah Potter], [2.5], [3], [0], [0],
+      [Tyrese Haliburton], [14.8], [2], [2], [3],
+      [Derrick White], [11.3], [1], [2], [2],
+    )
+  ],
+  [
+    `nba_data`:
+    #table(
+      columns: 3,
+      [*name*], [*nba_team*], [*position*],
+      [LeBron James], [Lakers], [Forward],
+      [Anthony Edwards], [Timberwolves], [Guard],
+      [Stephen Curry], [Warriors], [Guard],
+      [Anthony Davis], [Lakers], [Center],
+      [Joel Embiid], [Sixers], [Center],
+      [Jrue Holiday], [Celtics], [Guard],
+      [Bam Adebayo], [Heat], [Center],
+      [Devin Booker], [Suns], [Guard],
+      [Jayson Tatum], [Celtics], [Forward],
+      [Micah Potter], [Jazz], [Center],
+      [Tyrese Haliburton], [Pacers], [Guard],
+      [Derrick White], [Celtics], [Guard],
+    )
+  ],
 )
 
 #part(points: 2, breakable: false)[
@@ -61,13 +68,18 @@ player plays.
   minutes in order from highest PPM to lowest PPM. PPM is calculated as points
   divided by minutes.
 
+  Expected output:
+  #table(
+    columns: 1,
+    [*name*],
+    [LeBron James],
+    [Anthony Davis],
+    [Anthony Edwards],
+    [Joel Embiid],
+    [Stephen Curry],
+  )
+
   ```sql
-  -- EXPECTED OUTPUT:
-  -- LeBron James
-  -- Anthony Davis
-  -- Anthony Edwards
-  -- Joel Embiid
-  -- Stephen Curry
   SELECT name FROM __________;
                       (a)
   ```
@@ -86,12 +98,17 @@ player plays.
   Only players who played for at least 5 minutes should be considered in these
   calculations.
 
+  Expected output:
+  #table(
+    columns: 2,
+    [*nba_team*], [*average points*],
+    [Sixers], [10.0],
+    [Lakers], [13.0],
+    [Heat], [8.0],
+    [Celtics], [5.0],
+  )
+
   ```sql
-  -- EXPECTED OUTPUT:
-  -- Sixers|10.0
-  -- Lakers|13.0
-  -- Heat|8.0
-  -- Celtics|5.0
   SELECT __________ FROM __________ WHERE __________ GROUP BY __________ ORDER BY __________;
            (b)             (c)             (d)                (e)                (f)
   ```
@@ -141,11 +158,16 @@ player plays.
   that are not grouped (bare columns), SQLite fills those columns using the row
   that produced the maximum or minimum value.
 
+  Expected output:
+  #table(
+    columns: 3,
+    [*position*], [*name*], [*APM*],
+    [Guard], [Tyrese Haliburton], [0.2027027027027027],
+    [Forward], [LeBron James], [0.19607843137254904],
+    [Center], [Joel Embiid], [0.18072289156626503],
+  )
+
   ```sql
-  -- EXPECTED OUTPUT:
-  -- Guard|Tyrese Haliburton|0.2027027027027027
-  -- Forward|LeBron James|0.19607843137254904
-  -- Center|Joel Embiid|0.18072289156626503
   SELECT __________ FROM __________ WHERE __________ GROUP BY __________ ORDER BY __________;
            (g)             (h)             (i)                (j)                (k)
   ```

@@ -16,26 +16,39 @@ the rows in these tables were different than those shown.
 *Important:* You may write anything in the blanks including keywords such as
 `WHERE` or `ORDER BY`.
 
-```sql
-CREATE TABLE scoring AS
-  SELECT "Donald Stewart" AS player, 7 AS points, 1 AS quarter UNION
-  SELECT "Christopher Brown Jr.",    7,           1            UNION
-  SELECT "Ryan Sanborn",             3,           2            UNION
-  SELECT "Greg Thomas",              3,           2            UNION
-  SELECT "Cameron Scarlett",         7,           3            UNION
-  SELECT "Nikko Remigio",            7,           4            UNION
-  SELECT "Ryan Sanborn",             3,           4            UNION
-  SELECT "Chase Garbers",            7,           4;
-
-CREATE TABLE players AS
-  SELECT "Ryan Sanborn" AS name,  "Stanford" AS team UNION
-  SELECT "Donald Stewart",        "Stanford"         UNION
-  SELECT "Cameron Scarlett",      "Stanford"         UNION
-  SELECT "Christopher Brown Jr.", "Cal"              UNION
-  SELECT "Greg Thomas",           "Cal"              UNION
-  SELECT "Nikko Remigio",         "Cal"              UNION
-  SELECT "Chase Garbers",         "Cal";
-```
+#grid(
+  columns: (auto, auto),
+  gutter: 14pt,
+  [
+    `scoring`:
+    #table(
+      columns: 3,
+      [*player*], [*points*], [*quarter*],
+      [Donald Stewart], [7], [1],
+      [Christopher Brown Jr.], [7], [1],
+      [Ryan Sanborn], [3], [2],
+      [Greg Thomas], [3], [2],
+      [Cameron Scarlett], [7], [3],
+      [Nikko Remigio], [7], [4],
+      [Ryan Sanborn], [3], [4],
+      [Chase Garbers], [7], [4],
+    )
+  ],
+  [
+    `players`:
+    #table(
+      columns: 2,
+      [*name*], [*team*],
+      [Ryan Sanborn], [Stanford],
+      [Donald Stewart], [Stanford],
+      [Cameron Scarlett], [Stanford],
+      [Christopher Brown Jr.], [Cal],
+      [Greg Thomas], [Cal],
+      [Nikko Remigio], [Cal],
+      [Chase Garbers], [Cal],
+    )
+  ],
+)
 
 #part(points: 3, breakable: false)[
   Complete the SQL statement below to select a one-column table of quarters in
