@@ -28,12 +28,14 @@
 #let part(
   points: none,
   noprompt: false,
+  // Set to false to keep the whole part on one page.
+  breakable: true,
   body
 ) = {
   part-num.step()
   if points == none { points = 1 }
-  
-  context {
+
+  let content = context {
     if noprompt {
       stack(dir: ltr, spacing: 0.5em, qnum(), add_points(points), body)
     } else {
@@ -49,6 +51,11 @@
       )
     }
   }
+
+  if breakable { content } else { block(breakable: false, width: 100%, content) }
 }
+
+// Keeps a subpart's prompt and its answer area on the same page.
+#let subpart(body) = block(breakable: false, width: 100%, body)
 
 
