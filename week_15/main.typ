@@ -1,0 +1,34 @@
+#import "../61c_exam/lib.typ": *
+
+#set document(title: "SQL Tables")
+
+#show: exam.with(
+  class: "CS 61A",
+  semester: "Past Exam Practice",
+  instructors: (" "),
+  exam: "SQL Tables",
+  // time: "Untimed",
+  print_answers: false,
+)
+
+#show link: underline
+
+#include "../questions/sql/room-service/question.typ"
+#pagebreak()
+
+#include "../questions/sql/brainrot/question.typ"
+#pagebreak()
+
+#include "../questions/sql/big-game/question.typ"
+#pagebreak()
+
+#include "../questions/sql/students-in-sql/question.typ"
+#pagebreak()
+
+#include "../questions/sql/pokemon-sqarlet/question.typ"
+#pagebreak()
+
+#include "../questions/sql/cheap-donuts/question.typ"
+#pagebreak()
+
+#include "../questions/sql/sweet-dreams-team/question.typ"

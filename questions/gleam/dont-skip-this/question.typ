@@ -4,7 +4,7 @@
 = Don't Skip This
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Fall 2023 - Final 7 - `part` | *Level:* 
+  *Adapted from:* Fall 2023 - Final 7 | *Level:* 
   Challenge
 ]
 

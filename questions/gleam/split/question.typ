@@ -4,7 +4,7 @@
 = Split Decision
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Summer 2026 - 6B - `split` | *Level:* Regular
+  *Adapted from:* Summer 2026 - 6B | *Level:* Regular
 ]
 
 Implement `split` tail recursively. It takes a list `s` and a predicate
