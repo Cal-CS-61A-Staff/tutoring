@@ -47,13 +47,13 @@ The first few rows in each table are shown below. *Not all rows are shown.*
     ...
   ],
   [
-    Example result, part (a):
+    Example result (most frequent keyword):
     #table(
       columns: 2,
       [*keyword*], [*total*],
       [tortilla], [3],
     )
-    Example result, part (b):
+    Example `big` result:
     #table(
       columns: 2,
       [*ta*], [*id*],
@@ -74,7 +74,7 @@ The first few rows in each table are shown below. *Not all rows are shown.*
   ```
 
   #subpart[
-  *i. (1 pt)* Fill in blank (a).
+  *(a) (1 pt)* Fill in blank (a).
   #multi-choice(
     cols: 6,
     none-above: false,
@@ -88,21 +88,21 @@ The first few rows in each table are shown below. *Not all rows are shown.*
   ]
 
   #subpart[
-  *ii. (2 pt)* Fill in blank (b).
+  *(b) (2 pt)* Fill in blank (b).
   #multi-choice(
     cols: 2,
     none-above: false,
-    [`GROUP BY keyword;`],
-    [`GROUP BY keyword HAVING MAX(COUNT(*));`],
-    [`GROUP BY keyword HAVING COUNT(*) = MAX(COUNT(*));`],
-    [`GROUP BY keyword LIMIT MAX(COUNT(*));`],
-    [`GROUP BY keyword ORDER BY keyword DESC LIMIT 1;`],
-    correct()[`GROUP BY keyword ORDER BY COUNT(*) DESC LIMIT 1;`],
-    [`AS s1 JOIN students AS s2 ON s1.keyword = s2.keyword LIMIT 1;`],
-    [`ORDER BY COUNT(*) DESC;`],
-    [`ORDER BY keyword DESC;`],
-    [`ORDER BY keyword DESC LIMIT MAX(COUNT(*));`],
-    [`ORDER BY keyword DESC LIMIT 1;`],
+    [`GROUP BY keyword`],
+    [`GROUP BY keyword HAVING MAX(COUNT(*))`],
+    [`GROUP BY keyword HAVING COUNT(*) = MAX(COUNT(*))`],
+    [`GROUP BY keyword LIMIT MAX(COUNT(*))`],
+    [`GROUP BY keyword ORDER BY keyword DESC LIMIT 1`],
+    correct()[`GROUP BY keyword ORDER BY COUNT(*) DESC LIMIT 1`],
+    [`AS s1 JOIN students AS s2 ON s1.keyword = s2.keyword LIMIT 1`],
+    [`ORDER BY COUNT(*) DESC`],
+    [`ORDER BY keyword DESC`],
+    [`ORDER BY keyword DESC LIMIT MAX(COUNT(*))`],
+    [`ORDER BY keyword DESC LIMIT 1`],
   )
   ]
 ]
@@ -124,7 +124,7 @@ The first few rows in each table are shown below. *Not all rows are shown.*
   ```
 
   #subpart[
-  *i. (3 pt)* Fill in blank (c).
+  *(c) (3 pt)* Fill in blank (c).
   #answer_box(width: 100%)[`ON discussion_id = id GROUP BY id HAVING COUNT(*) > 20`]
   ]
 ]

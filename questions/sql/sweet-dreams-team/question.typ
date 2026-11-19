@@ -31,7 +31,7 @@ player plays.
       [Anthony Edwards], [20.6], [13], [2], [1],
       [Stephen Curry], [21.8], [13], [2], [2],
       [Anthony Davis], [17.6], [12], [10], [1],
-      [Joel Embiid], [16.6], [10], [7], [3],
+      [Joel Embiid], [16.6], [10], [8], [3],
       [Jrue Holiday], [17.8], [8], [4], [3],
       [Bam Adebayo], [17.6], [8], [5], [1],
       [Devin Booker], [20.0], [7], [2], [1],
@@ -103,7 +103,7 @@ player plays.
   Expected output:
   #table(
     columns: 2,
-    [*nba_team*], [*average points*],
+    [*nba_team*], [*average_points*],
     [Sixers], [10.0],
     [Lakers], [13.0],
     [Heat], [8.0],
@@ -117,7 +117,7 @@ player plays.
 
   #subpart[
   *(b) (1 pt)* Fill in blank (b).
-  #answer_box(width: 100%)[`nba_team, AVG(points)`]
+  #answer_box(width: 100%)[`nba_team, AVG(points) AS average_points`]
   ]
 
   #subpart[
@@ -177,7 +177,7 @@ player plays.
 
   #subpart[
   *(g) (1 pt)* Fill in blank (g).
-  #answer_box(width: 100%)[`position, b.name, MAX(assists / minutes)` or `position, n.name, MAX(assists / minutes)`]
+  #answer_box(width: 100%)[`position, b.name, MAX(assists / minutes) AS APM` or `position, n.name, MAX(assists / minutes) AS APM`]
   ]
 
   #subpart[
@@ -205,6 +205,6 @@ player plays.
 
   #subpart[
   *(k) (1 pt)* Fill in blank (k).
-  #answer_box(width: 100%)[`MAX(assists / minutes) DESC` or `assists / minutes DESC`]
+  #answer_box(width: 100%)[`APM DESC`, `MAX(assists / minutes) DESC`, or `assists / minutes DESC`]
   ]
 ]

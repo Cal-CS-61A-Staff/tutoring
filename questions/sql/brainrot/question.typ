@@ -56,6 +56,8 @@ unique string).
                                    (a)
   ```
 
+  #subpart[
+  *(a) (3 pt)* Fill in blank (a).
   #multi-choice(
     cols: 1,
     none-above: false,
@@ -68,16 +70,17 @@ unique string).
     [`who JOIN kinds ON kind=kinds WHERE living=yes`],
     [`who JOIN kinds ON kind=kinds WHERE living='yes'`],
   )
+  ]
 ]
 
 #part(points: 3, breakable: false)[
   Two characters can battle if the smaller one is at least half the size of the
-  larger one (or they are the same size). Fill in blank (b) to create a table
+  larger one (or they are the same size). Complete the query to create a table
   with one row per character that has two columns: the character's `name` and
   the `number` of other characters it can battle. For example,
   `lirili larila` can only battle `tralalero tralala` because all other
   characters are too small. Do not include rows for characters that cannot
-  battle any other characters. *Select all that apply.*
+  battle any other characters.
 
   #table(
     columns: 2,
@@ -92,10 +95,12 @@ unique string).
 
   ```sql
   SELECT a.name,COUNT(*) FROM who AS a, who AS b
-  WHERE a.name!=b.name AND _______ GROUP BY a.name;
-                             (b)
+  WHERE a.name != b.name AND _______ GROUP BY a.name;
+                               (b)
   ```
 
+  #subpart[
+  *(b) (3 pt)* Select all options that could fill in blank (b).
   #multi-select(
     cols: 1,
     none-above: false,
@@ -109,4 +114,5 @@ unique string).
     correct()[`MIN(a.size / b.size, b.size / a.size) >= 0.5`],
     [`MAX(a.size / b.size, b.size / a.size) >= 0.5`],
   )
+  ]
 ]
