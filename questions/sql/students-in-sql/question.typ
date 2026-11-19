@@ -76,7 +76,7 @@ The first few rows in each table are shown below. *Not all rows are shown.*
   #subpart[
   *i. (1 pt)* Fill in blank (a).
   #multi-choice(
-    cols: 3,
+    cols: 6,
     none-above: false,
     [`1`],
     [`name`],
@@ -90,7 +90,7 @@ The first few rows in each table are shown below. *Not all rows are shown.*
   #subpart[
   *ii. (2 pt)* Fill in blank (b).
   #multi-choice(
-    cols: 1,
+    cols: 2,
     none-above: false,
     [`GROUP BY keyword;`],
     [`GROUP BY keyword HAVING MAX(COUNT(*));`],
