@@ -31,7 +31,7 @@ player plays.
       [Anthony Edwards], [20.6], [13], [2], [1],
       [Stephen Curry], [21.8], [13], [2], [2],
       [Anthony Davis], [17.6], [12], [10], [1],
-      [Joel Embiid], [16.6], [10], [8], [3],
+      [Joel Embiid], [16.6], [10], [7], [3],
       [Jrue Holiday], [17.8], [8], [4], [3],
       [Bam Adebayo], [17.6], [8], [5], [1],
       [Devin Booker], [20.0], [7], [2], [1],
@@ -100,7 +100,7 @@ player plays.
   Only players who played for at least 5 minutes should be considered in these
   calculations.
 
-  Expected output:
+  Expected output (the Sixers and Lakers rows may appear in either order):
   #table(
     columns: 2,
     [*nba_team*], [*average_points*],
