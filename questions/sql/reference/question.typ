@@ -104,21 +104,17 @@
       HAVING COUNT(*) > 1;  -- drop groups
     ```
 
-    With two or more arguments, `MAX` and `MIN` are not aggregates:
-    `MAX(3, 8)` is `8` for each row, like Python's `max`.
-
     *Bare columns with `MAX` and `MIN`*
 
     A _bare column_ is a selected column that is neither aggregated nor
     listed in `GROUP BY`. When a query uses exactly one `MAX(x)` or `MIN(x)`
     aggregate, SQLite takes bare columns from the row that has the maximum
-    or minimum value:
+    or minimum value. With `GROUP BY`, this happens separately in each
+    group, using that group's maximum or minimum row:
 
     ```text
     SELECT name, MAX(age) -- oldest dog
       FROM dogs;
     ```
-
-    With `GROUP BY`, it gives one such row per group.
   ],
 )
