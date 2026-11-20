@@ -1,12 +1,12 @@
 #import "../61c_exam/lib.typ": *
 
-#set document(title: "SQL Tables")
+#set document(title: "SQL")
 
 #show: exam.with(
   class: "CS 61A",
   semester: "Past Exam Practice",
   instructors: (" "),
-  exam: "SQL Tables",
+  exam: "SQL",
   // time: "Untimed",
   print_answers: false,
 )

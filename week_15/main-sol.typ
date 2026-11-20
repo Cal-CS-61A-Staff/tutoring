@@ -1,12 +1,12 @@
 #import "../61c_exam/lib.typ": *
 
-#set document(title: "SQL Tables - Solutions")
+#set document(title: "SQL - Solutions")
 
 #show: exam.with(
   class: "CS 61A",
   semester: "Past Exam Practice",
   instructors: (" "),
-  exam: "SQL Tables - Solutions",
+  exam: "SQL - Solutions",
   print_answers: true,
 )
 
