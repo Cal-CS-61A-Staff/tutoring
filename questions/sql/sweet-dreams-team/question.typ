@@ -168,9 +168,9 @@ player plays.
   #table(
     columns: 3,
     [*position*], [*name*], [*APM*],
-    [Guard], [Tyrese Haliburton], [0.2027027027027027],
-    [Forward], [LeBron James], [0.19607843137254904],
-    [Center], [Joel Embiid], [0.18072289156626503],
+    [Guard], [Tyrese Haliburton], [0.202702702702703],
+    [Forward], [LeBron James], [0.196078431372549],
+    [Center], [Joel Embiid], [0.180722891566265],
   )
 
   ```sql
