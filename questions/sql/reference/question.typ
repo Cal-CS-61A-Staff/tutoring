@@ -48,7 +48,7 @@
     `WHERE`, `ORDER BY`, and `HAVING`.
 
     Operators: `+`, `-`, `*`, `/`, `%`, `=`/`==`, `!=`/`<>`, `<`, `<=`, `>`,
-    `>=`, `AND`, `OR`, `NOT`, and `||` (joins strings).
+    `>=`, `AND`, `OR`, `NOT`, and `||` (concatenates strings).
 
     - Integer division drops the remainder: `7 / 2` is `3`, but `7.0 / 2` is
       `3.5`.
