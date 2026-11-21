@@ -92,14 +92,14 @@ two shops (A and B).
   shown above.
 
   ```sql
-  SELECT __(c)__ AS total_cost
+  SELECT dish, __(c)__ AS total_cost
     FROM __(d)__
     GROUP BY __(e)__;
   ```
 
   #subpart[
   *(c) (1 pt)* Fill in blank (c).
-  #answer_box(width: 100%)[`dish, SUM(price)`]
+  #answer_box(width: 100%)[`SUM(price)`]
   ]
 
   #subpart[
