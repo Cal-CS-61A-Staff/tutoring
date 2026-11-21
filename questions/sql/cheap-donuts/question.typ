@@ -87,7 +87,7 @@ There are three tables in a database:
 
   #subpart[
   *(a) (2 pt)* Fill in blank (a).
-  #answer_box(width: 100%)[`MIN(price) * k` or `MIN(price * k)`]
+  #answer_box(width: 100%)[`MIN(price) * k` *or* `MIN(price * k)`]
   ]
 
   #subpart[

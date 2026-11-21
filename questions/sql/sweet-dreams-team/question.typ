@@ -138,7 +138,7 @@ player plays.
 
   #subpart[
   *(d) (1 pt)* Fill in blank (d). This blank may be left empty if nothing is needed.
-  #answer_box(width: 100%)[`ON b.name = n.name AND minutes >= 5` or `ON b.name = n.name WHERE minutes >= 5`]
+  #answer_box(width: 100%)[`ON b.name = n.name AND minutes >= 5` *or* `ON b.name = n.name WHERE minutes >= 5`]
   ]
 
   #subpart[
@@ -183,7 +183,7 @@ player plays.
 
   #subpart[
   *(g) (1 pt)* Fill in blank (g).
-  #answer_box(width: 100%)[`position, b.name, MAX(assists / minutes) AS APM` or `position, n.name, MAX(assists / minutes) AS APM`]
+  #answer_box(width: 100%)[`position, b.name, MAX(assists / minutes) AS APM` *or* `position, n.name, MAX(assists / minutes) AS APM`]
   ]
 
   #subpart[
@@ -201,7 +201,7 @@ player plays.
 
   #subpart[
   *(i) (1 pt)* Fill in blank (i). This blank may be left empty if nothing is needed.
-  #answer_box(width: 100%)[`ON b.name = n.name AND minutes >= 5` or `ON b.name = n.name WHERE minutes >= 5`]
+  #answer_box(width: 100%)[`ON b.name = n.name AND minutes >= 5` *or* `ON b.name = n.name WHERE minutes >= 5`]
   ]
 
   #subpart[
@@ -211,6 +211,6 @@ player plays.
 
   #subpart[
   *(k) (1 pt)* Fill in blank (k).
-  #answer_box(width: 100%)[`APM DESC`, `MAX(assists / minutes) DESC`, or `assists / minutes DESC`]
+  #answer_box(width: 100%)[`APM DESC` *or* `MAX(assists / minutes) DESC` *or* `assists / minutes DESC`]
   ]
 ]
