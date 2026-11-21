@@ -11,7 +11,7 @@ There are three tables in a database:
 
 - The `donuts` table has a row for each menu option at a donut shop. There are
   columns for the `kind` (string) of dough and `flavor` (string). For example,
-  there is one row for chocolate cake donuts (although the store may have many
+  there is one row for chocolate cake donuts (although the shop may have many
   such donuts, they only have one menu option for this kind & flavor
   combination).
 - The price of a donut depends only on the dough. The `prices` table has a row
@@ -28,9 +28,8 @@ There are three tables in a database:
   *least expensive* total cost of buying `k` donuts of that flavor, where `k` is
   the number your friends want.
 
-  The rows of the result can appear in any order. Here is an example, but
-  complete the query so that it would work even if the contents or number of
-  rows were different.
+  Here is an example, but complete the query so that it would work even if the
+  contents or number of rows were different.
 
   #grid(
     columns: (auto, auto, auto, auto),
@@ -67,7 +66,7 @@ There are three tables in a database:
       )
     ],
     [
-      result:
+      Expected result (rows may appear in any order):
       #table(
         columns: 2,
         [*flavor*], [*total*],
@@ -92,7 +91,7 @@ There are three tables in a database:
 
   #subpart[
   *(b) (3 pt)* Fill in blank (b).
-  #answer_box(width: 100%)[`JOIN donuts ON choice = flavor JOIN prices ON kind = dough` (each condition may be on either `ON`)]
+  #answer_box(width: 100%)[`JOIN donuts ON choice = flavor JOIN prices ON kind = dough` *(*each condition may be on either `ON`*)*]
   ]
 
   #subpart[

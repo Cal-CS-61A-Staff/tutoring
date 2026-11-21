@@ -22,10 +22,10 @@
 #include "../questions/sql/brainrot/question.typ"
 #pagebreak()
 
-#include "../questions/sql/big-game/question.typ"
+#include "../questions/sql/students-in-sql/question.typ"
 #pagebreak()
 
-#include "../questions/sql/students-in-sql/question.typ"
+#include "../questions/sql/the-big-sql/question.typ"
 #pagebreak()
 
 #include "../questions/sql/pokemon-sqarlet/question.typ"

@@ -47,13 +47,13 @@ The first few rows in each table are shown below. *Not all rows are shown.*
     ...
   ],
   [
-    Example result (most frequent keyword):
+    Expected result (Q3.1):
     #table(
       columns: 2,
       [*keyword*], [*total*],
       [tortilla], [3],
     )
-    Example `big` result:
+    Expected result (Q3.2):
     #table(
       columns: 2,
       [*ta*], [*id*],
@@ -112,7 +112,7 @@ The first few rows in each table are shown below. *Not all rows are shown.*
   20 students. The columns give the `ta` name and discussion `id` for each of
   these discussions.
 
-  An example `big` result is shown above. The first row indicates that the
+  The expected `big` result is shown above. The first row indicates that the
   discussion with ID 1 taught by Rhys has more than 20 students in it (even
   though only 1 of these students is shown in the example rows of the
   `students` table).
@@ -126,6 +126,6 @@ The first few rows in each table are shown below. *Not all rows are shown.*
 
   #subpart[
   *(c) (3 pt)* Fill in blank (c).
-  #answer_box(width: 100%)[`ON discussion_id = id GROUP BY id HAVING COUNT(*) > 20` (`GROUP BY discussion_id` also works)]
+  #answer_box(width: 100%)[`ON discussion_id = id GROUP BY id HAVING COUNT(*) > 20` *(*`GROUP BY discussion_id` also works*)*]
   ]
 ]

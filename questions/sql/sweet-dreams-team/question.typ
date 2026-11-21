@@ -11,8 +11,6 @@ The USA Basketball Men's National Team is competing in the 2024 Olympics and
 needs your help to analyze their players' performances. Complete the SQL
 queries using the two tables below.
 
-_Hint:_ You may use SQL keywords in the blanks.
-
 The `box_scores` table contains data on how many minutes they spent playing in
 one game as well as how many points, rebounds, and assists each player got in
 that game. The `nba_data` table contains data on which National Basketball
@@ -69,7 +67,7 @@ player plays.
   minutes in order from highest PPM to lowest PPM. PPM is calculated as points
   divided by minutes.
 
-  Expected output:
+  Expected result:
   #table(
     columns: 1,
     [*name*],
@@ -100,7 +98,7 @@ player plays.
   Only players who played for at least 5 minutes should be considered in these
   calculations.
 
-  Expected output (the Sixers and Lakers rows may appear in either order):
+  Expected result (the Sixers and Lakers rows may appear in either order):
   #table(
     columns: 2,
     [*nba_team*], [*average_points*],
@@ -164,7 +162,7 @@ player plays.
   that are not grouped (bare columns), SQLite fills those columns using the row
   that produced the maximum or minimum value.
 
-  Expected output:
+  Expected result:
   #table(
     columns: 3,
     [*position*], [*name*], [*APM*],

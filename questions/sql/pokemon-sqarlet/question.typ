@@ -45,9 +45,9 @@ You also have a table `Moves` listing all Pokemon moves:
 
   For example, Maushold has a base attack of 30, and has two moves with
   `MoveAttack` values 100 and 30, respectively. Its total attack is
-  $30 + 100 + 30 = 160$. With the above tables, you should have the following
-  result:
+  $30 + 100 + 30 = 160$.
 
+  Expected result:
   #table(
     columns: 2,
     [*Name*], [*TotalAttack*],

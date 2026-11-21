@@ -47,7 +47,7 @@ Each `room` appears once. All lecture halls are rooms.
       )
     ],
     [
-      result:
+      Expected result:
       #table(
         columns: 2,
         [*course*], [*seats*],
@@ -75,7 +75,7 @@ Each `room` appears once. All lecture halls are rooms.
   ]
 
   #subpart[
-  *(b) (4 pt)* Fill in blank (b). You may include keywords such as `JOIN`, `ON`, or `WHERE`.
+  *(b) (4 pt)* Fill in blank (b).
   #answer_box(width: 100%)[`finals JOIN sizes ON hall = room`]
   ]
 
