@@ -4,7 +4,7 @@
 = After Party
 
 #block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
-  *Adapted from:* Fall 2023 - Midterm 2 6 - `after` | *Level:* 
+  *Adapted from:* Fall 2023 - Midterm 2 6 | *Level:* 
   Challenge
 ]
 
