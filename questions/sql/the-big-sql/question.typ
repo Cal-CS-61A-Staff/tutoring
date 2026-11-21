@@ -104,7 +104,7 @@ two shops (A and B).
 
   #subpart[
   *(d) (2 pt)* Fill in blank (d).
-  #answer_box(width: 100%)[`ingredients JOIN shops ON food = part AND shop = "A"` *(*the tables may be in either order*)*]
+  #answer_box(width: 100%)[`ingredients JOIN shops ON food = part AND shop = "A"` *(*`WHERE` instead of `AND` also works*)*]
   ]
 
   #subpart[
