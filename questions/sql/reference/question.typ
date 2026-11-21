@@ -18,13 +18,14 @@
     *Structure of a query*
 
     ```text
-    SELECT [columns]      -- 5
-      FROM [tables]       -- 1
-      WHERE [condition]   -- 2
-      GROUP BY [columns]  -- 3
-      HAVING [condition]  -- 4
-      ORDER BY [columns]  -- 6
-      LIMIT [number];     -- 7
+    SELECT [columns]            -- 5
+      FROM [table]              -- 1
+        JOIN [table] ON [condition]
+      WHERE [condition]         -- 2
+      GROUP BY [columns]        -- 3
+      HAVING [condition]        -- 4
+      ORDER BY [columns]        -- 6
+      LIMIT [number];           -- 7
     ```
 
     Only `SELECT` is required, and the clauses that appear must be in this
@@ -51,11 +52,12 @@
 
     - Integer division drops the remainder: `7 / 2` is `3`, but `7.0 / 2` is
       `3.5`.
-    - `'yes'` and `"yes"` are strings; an unquoted `yes` is a column name.
+    - Strings can use either single or double quotes. Unquoted names are
+      column names.
 
     *Sorting and limiting*
 
-    - `ORDER BY age` sorts in increasing order; `ORDER BY age DESC` sorts in
+    - `ORDER BY age` sorts in increasing order. `ORDER BY age DESC` sorts in
       decreasing order. `ORDER BY a, b` breaks ties in `a` using `b`.
     - `LIMIT n` keeps only the first `n` rows, and is usually combined with
       `ORDER BY`.
@@ -63,28 +65,33 @@
   [
     *Joining tables*
 
-    Listing several tables in `FROM` joins them: the result has one row for
-    every combination of a row from each table. These are equivalent:
+    `a JOIN b ON [condition]` pairs every row of `a` with every row of `b`,
+    then keeps only the pairs where the condition is true. If `a` has 3 rows
+    and `b` has 4 rows, there are 12 pairs before the condition is checked.
 
     ```text
-    SELECT * FROM a, b WHERE a.x = b.y;
     SELECT * FROM a JOIN b ON a.x = b.y;
-    SELECT * FROM a JOIN b WHERE a.x = b.y;
     ```
 
-    If `a` has 3 rows and `b` has 4 rows, `FROM a, b` has 12 rows before
-    filtering.
+    Add another `JOIN ... ON` for each additional table. An `ON` can hold
+    several conditions combined with `AND`:
+
+    ```text
+    SELECT * FROM a JOIN b ON a.x = b.y
+                    JOIN c ON b.z = c.w
+                           AND a.x > 5;
+    ```
 
     To join a table with itself, give each copy a name with `AS`:
 
     ```text
     SELECT p.name, c.name -- p older than c
-      FROM dogs AS p, dogs AS c
-      WHERE p.age > c.age;
+      FROM dogs AS p JOIN dogs AS c
+        ON p.age > c.age;
     ```
 
     Use `table.column` (like `p.name`) when a column name appears in more
-    than one table; otherwise the table name may be left out.
+    than one table. Otherwise, the table name may be left out.
 
     *Aggregation and grouping*
 
@@ -103,6 +110,9 @@
       GROUP BY age
       HAVING COUNT(*) > 1;  -- drop groups
     ```
+
+    With two or more arguments, `MAX` and `MIN` are not aggregates:
+    `MAX(3, 8)` is `8` for each row, like Python's `max`.
 
     *Bare columns with `MAX` and `MIN`*
 

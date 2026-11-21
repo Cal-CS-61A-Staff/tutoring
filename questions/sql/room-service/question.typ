@@ -57,8 +57,9 @@ Each `room` appears once. All lecture halls are rooms.
   )
 
   ```sql
-  SELECT course, SUM(_________) AS seats FROM _________ GROUP BY _________;
-                       (a)                       (b)                (c)
+  SELECT course, SUM(__(a)__) AS seats
+    FROM __(b)__
+    GROUP BY __(c)__;
   ```
 
   #subpart[
@@ -74,8 +75,8 @@ Each `room` appears once. All lecture halls are rooms.
   ]
 
   #subpart[
-  *(b) (4 pt)* Fill in blank (b). You may include a `WHERE` or `HAVING` clause.
-  #answer_box(width: 100%)[`finals, sizes WHERE hall=room`]
+  *(b) (4 pt)* Fill in blank (b). You may include keywords such as `JOIN`, `ON`, or `WHERE`.
+  #answer_box(width: 100%)[`finals JOIN sizes ON hall = room`]
   ]
 
   #subpart[

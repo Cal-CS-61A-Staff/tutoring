@@ -55,12 +55,13 @@ the rows in these tables were different than those shown.
   which more than 10 total points were scored.
 
   ```sql
-  SELECT quarter FROM scoring
+  SELECT quarter
+    FROM scoring
     ____________________________________________;
   ```
 
-  #answer_box(width: 100%, height: 90pt)[
-    #stack(spacing: 0.9em, `SELECT quarter FROM scoring`, `  GROUP BY quarter HAVING SUM(points) > 10;`)
+  #answer_box(width: 100%, height: 120pt)[
+    #stack(spacing: 0.9em, `SELECT quarter`, `  FROM scoring`, `  GROUP BY quarter`, `  HAVING SUM(points) > 10;`)
     #table(columns: 1, [1], [4])
   ]
 ]
@@ -70,12 +71,14 @@ the rows in these tables were different than those shown.
   scored by each team. Assume that no two players have the same name.
 
   ```sql
-  SELECT team, SUM(points) FROM scoring, players
+  SELECT team, SUM(points)
+    FROM scoring
+      JOIN players
     ____________________________________________;
   ```
 
-  #answer_box(width: 100%, height: 90pt)[
-    #stack(spacing: 0.9em, `SELECT team, SUM(points) FROM scoring, players`, `  WHERE player=name GROUP BY team;`)
+  #answer_box(width: 100%, height: 120pt)[
+    #stack(spacing: 0.9em, `SELECT team, SUM(points)`, `  FROM scoring`, `    JOIN players ON player=name`, `  GROUP BY team;`)
     #table(columns: 2, [Cal], [24], [Stanford], [20])
   ]
 ]

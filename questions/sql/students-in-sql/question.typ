@@ -69,8 +69,8 @@ The first few rows in each table are shown below. *Not all rows are shown.*
   ties).
 
   ```sql
-  SELECT keyword, _______ AS total FROM students _______;
-                    (a)                            (b)
+  SELECT keyword, __(a)__ AS total
+    FROM students __(b)__;
   ```
 
   #subpart[
@@ -119,12 +119,13 @@ The first few rows in each table are shown below. *Not all rows are shown.*
 
   ```sql
   CREATE TABLE big AS
-  SELECT ta, id FROM students JOIN discussions _______;
-                                                 (c)
+    SELECT ta, id
+      FROM students
+        JOIN discussions __(c)__;
   ```
 
   #subpart[
   *(c) (3 pt)* Fill in blank (c).
-  #answer_box(width: 100%)[`ON discussion_id = id GROUP BY id HAVING COUNT(*) > 20`]
+  #answer_box(width: 100%)[`ON discussion_id = id GROUP BY id HAVING COUNT(*) > 20` (`GROUP BY discussion_id` also works)]
   ]
 ]

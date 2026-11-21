@@ -81,8 +81,8 @@ player plays.
   )
 
   ```sql
-  SELECT name FROM __________;
-                      (a)
+  SELECT name
+    FROM __(a)__;
   ```
 
   #subpart[
@@ -111,8 +111,11 @@ player plays.
   )
 
   ```sql
-  SELECT __________ FROM __________ WHERE __________ GROUP BY __________ ORDER BY __________;
-           (b)             (c)             (d)                (e)                (f)
+  SELECT __(b)__
+    FROM __(c)__
+      __(d)__
+    GROUP BY __(e)__
+    ORDER BY __(f)__;
   ```
 
   #subpart[
@@ -127,15 +130,15 @@ player plays.
     none-above: false,
     [`box_scores`],
     [`nba_data`],
-    [`box_scores AS b1, box_scores AS b2`],
-    [`nba_data AS n1, nba_data AS n2`],
-    correct()[`box_scores AS b, nba_data AS n`],
+    [`box_scores AS b1 JOIN box_scores AS b2`],
+    [`nba_data AS n1 JOIN nba_data AS n2`],
+    correct()[`box_scores AS b JOIN nba_data AS n`],
   )
   ]
 
   #subpart[
-  *(d) (1 pt)* Fill in blank (d).
-  #answer_box(width: 100%)[`minutes >= 5 AND b.name = n.name`]
+  *(d) (1 pt)* Fill in blank (d). This blank may be left empty if nothing is needed.
+  #answer_box(width: 100%)[`ON b.name = n.name AND minutes >= 5` or `ON b.name = n.name WHERE minutes >= 5`]
   ]
 
   #subpart[
@@ -171,8 +174,11 @@ player plays.
   )
 
   ```sql
-  SELECT __________ FROM __________ WHERE __________ GROUP BY __________ ORDER BY __________;
-           (g)             (h)             (i)                (j)                (k)
+  SELECT __(g)__
+    FROM __(h)__
+      __(i)__
+    GROUP BY __(j)__
+    ORDER BY __(k)__;
   ```
 
   #subpart[
@@ -187,15 +193,15 @@ player plays.
     none-above: false,
     [`box_scores`],
     [`nba_data`],
-    [`box_scores AS b1, box_scores AS b2`],
-    [`nba_data AS n1, nba_data AS n2`],
-    correct()[`box_scores AS b, nba_data AS n`],
+    [`box_scores AS b1 JOIN box_scores AS b2`],
+    [`nba_data AS n1 JOIN nba_data AS n2`],
+    correct()[`box_scores AS b JOIN nba_data AS n`],
   )
   ]
 
   #subpart[
-  *(i) (1 pt)* Fill in blank (i).
-  #answer_box(width: 100%)[`minutes >= 5 AND b.name = n.name`]
+  *(i) (1 pt)* Fill in blank (i). This blank may be left empty if nothing is needed.
+  #answer_box(width: 100%)[`ON b.name = n.name AND minutes >= 5` or `ON b.name = n.name WHERE minutes >= 5`]
   ]
 
   #subpart[

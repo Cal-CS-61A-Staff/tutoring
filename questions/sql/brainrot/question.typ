@@ -52,8 +52,8 @@ unique string).
   )
 
   ```sql
-  SELECT SUM(size) AS total FROM _______;
-                                   (a)
+  SELECT SUM(size) AS total
+    FROM __(a)__;
   ```
 
   #subpart[
@@ -94,9 +94,10 @@ unique string).
   )
 
   ```sql
-  SELECT a.name,COUNT(*) FROM who AS a, who AS b
-  WHERE a.name != b.name AND _______ GROUP BY a.name;
-                               (b)
+  SELECT a.name, COUNT(*)
+    FROM who AS a
+      JOIN who AS b ON a.name != b.name AND __(b)__
+    GROUP BY a.name;
   ```
 
   #subpart[

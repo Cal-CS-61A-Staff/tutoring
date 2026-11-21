@@ -79,8 +79,10 @@ There are three tables in a database:
   )
 
   ```sql
-  SELECT flavor, _______ AS total FROM _______ WHERE _______ GROUP BY _______;
-                   (a)                  (b)           (c)              (d)
+  SELECT flavor, __(a)__ AS total
+    FROM quantity
+      __(b)__
+    GROUP BY __(c)__;
   ```
 
   #subpart[
@@ -89,24 +91,12 @@ There are three tables in a database:
   ]
 
   #subpart[
-  *(b) (1 pt)* Fill in blank (b).
-  #multi-choice(
-    cols: 2,
-    none-above: false,
-    [`quantity, prices`],
-    correct()[`quantity, donuts, prices`],
-    [`donuts, prices AS a, prices AS b`],
-    [`quantity, prices AS a, prices AS b`],
-  )
+  *(b) (3 pt)* Fill in blank (b).
+  #answer_box(width: 100%)[`JOIN donuts ON choice = flavor JOIN prices ON kind = dough` (each condition may be on either `ON`)]
   ]
 
   #subpart[
-  *(c) (2 pt)* Fill in blank (c).
-  #answer_box(width: 100%)[`kind=dough AND choice=flavor`]
-  ]
-
-  #subpart[
-  *(d) (1 pt)* Fill in blank (d).
+  *(c) (1 pt)* Fill in blank (c).
   #multi-choice(
     cols: 4,
     none-above: false,

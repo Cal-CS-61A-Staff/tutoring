@@ -60,8 +60,10 @@ You also have a table `Moves` listing all Pokemon moves:
 
   ```sql
   CREATE TABLE Attack AS
-  SELECT __(a)__ AS Name, __(b)__ AS TotalAttack FROM __(c)__ WHERE __(d)__
-  ORDER BY TotalAttack;
+    SELECT __(a)__ AS Name, __(b)__ AS TotalAttack
+      FROM Pokemon AS p
+        __(c)__
+      ORDER BY TotalAttack;
   ```
 
   #subpart[
@@ -83,21 +85,16 @@ You also have a table `Moves` listing all Pokemon moves:
   ]
 
   #subpart[
-  *(c) (2 pt)* Select all options that could fill in blank (c).
+  *(c) (4 pt)* Select all options that could fill in blank (c).
   #multi-select(
-    cols: 2,
+    cols: 1,
     none-above: false,
-    [`Pokemon, Moves`],
-    [`Pokemon, Pokemon, Moves`],
-    [`Pokemon, Moves, Moves`],
-    [`Pokemon as p, Moves as a`],
-    [`Pokemon as p, Pokemon as q, Moves as a`],
-    correct()[`Pokemon as p, Moves as a, Moves as b`],
+    [`JOIN Moves AS a ON p.Move1 = a.Name`],
+    [`JOIN Moves AS a ON p.Move1 = a.Name AND p.Move2 = a.Name`],
+    [`JOIN Moves AS a ON p.Move1 = a.Name OR p.Move2 = a.Name`],
+    [`JOIN Moves AS a ON p.Move1 = a.Name JOIN Moves AS b ON p.Move2 = a.Name`],
+    [`JOIN Pokemon AS q ON p.Name = q.Name JOIN Moves AS a ON p.Move1 = a.Name`],
+    correct()[`JOIN Moves AS a ON p.Move1 = a.Name JOIN Moves AS b ON p.Move2 = b.Name`],
   )
-  ]
-
-  #subpart[
-  *(d) (2 pt)* Fill in blank (d).
-  #answer_box(width: 100%)[`p.Move1 = a.Name AND p.Move2 = b.Name`]
   ]
 ]
