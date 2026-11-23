@@ -1,0 +1,108 @@
+#import "../../../61c_exam/lib.typ": *
+#import "../../../61c_exam/questions/answer-box.typ": answer_box
+
+= Cheap Donuts
+
+#block(width: 100%, stroke: (left: 2pt), inset: 7pt)[
+  *Adapted from:* Fall 2023 - Final 8 | *Level:* Challenge
+]
+
+There are three tables in a database:
+
+- The `donuts` table has a row for each menu option at a donut shop. There are
+  columns for the `kind` (string) of dough and `flavor` (string). For example,
+  there is one row for chocolate cake donuts (although the shop may have many
+  such donuts, they only have one menu option for this kind & flavor
+  combination).
+- The price of a donut depends only on the dough. The `prices` table has a row
+  for each kind of dough. The `dough` (string) column contains the kind; the
+  `price` (number) column is for one donut made from that kind of dough.
+- Your friends only care about the flavor, not the kind of dough. The
+  `quantity` table contains one row for every flavor your friends want. The
+  `choice` (string) column is the flavor they want and the `k` (number) column
+  is the number of donuts of that flavor they want.
+
+#part(points: 6, breakable: false)[
+  Create a table with two columns, `flavor` (string) and `total` (number) with
+  one row for each flavor your friends want. The `total` column contains the
+  *least expensive* total cost of buying `k` donuts of that flavor, where `k` is
+  the number your friends want.
+
+  Here is an example, but complete the query so that it would work even if the
+  contents or number of rows were different.
+
+  #grid(
+    columns: (auto, auto, auto, auto),
+    gutter: 12pt,
+    [
+      `donuts`:
+      #table(
+        columns: 2,
+        [*kind*], [*flavor*],
+        [cake], [chocolate],
+        [cake], [lemon],
+        [cake], [vanilla],
+        [raised], [cinnamon],
+        [raised], [chocolate],
+      )
+    ],
+    [
+      `prices`:
+      #table(
+        columns: 2,
+        [*dough*], [*price*],
+        [cake], [2],
+        [raised], [3],
+      )
+    ],
+    [
+      `quantity`:
+      #table(
+        columns: 2,
+        [*choice*], [*k*],
+        [chocolate], [6],
+        [cinnamon], [3],
+        [vanilla], [3],
+      )
+    ],
+    [
+      Expected result (rows may appear in any order):
+      #table(
+        columns: 2,
+        [*flavor*], [*total*],
+        [chocolate], [12],
+        [cinnamon], [9],
+        [vanilla], [6],
+      )
+    ],
+  )
+
+  ```sql
+  SELECT flavor, __(a)__ AS total
+    FROM quantity
+      __(b)__
+    GROUP BY __(c)__;
+  ```
+
+  #subpart[
+  *(a) (2 pt)* Fill in blank (a).
+  #answer_box(width: 100%)[`MIN(price) * k` *or* `MIN(price * k)`]
+  ]
+
+  #subpart[
+  *(b) (3 pt)* Fill in blank (b).
+  #answer_box(width: 100%)[`JOIN donuts ON choice = flavor JOIN prices ON kind = dough` *(*each condition may be on either `ON`*)*]
+  ]
+
+  #subpart[
+  *(c) (1 pt)* Fill in blank (c).
+  #multi-choice(
+    cols: 4,
+    none-above: false,
+    [`quantity`],
+    [`dough`],
+    [`kind`],
+    correct()[`flavor`],
+  )
+  ]
+]
